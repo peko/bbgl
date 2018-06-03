@@ -10,4 +10,5 @@ Dependencies
  * nuklear GUI
  * gl3w
  * OpenGL 3.3
+ * klib
 
