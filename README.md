@@ -1,7 +1,7 @@
 Bare Bone GL 3.3 app on C
 =========================
 
-!()[screenshoot.png]
+![](screenshoot.png)
 
 Dependencies
 ------------
