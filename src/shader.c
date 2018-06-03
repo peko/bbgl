@@ -1,25 +1,26 @@
-
+#include <stdlib.h>
 #include <stdio.h>
 
 #include "shader.h"
 
 static void check_shader(GLuint sid);
+static void load_file( char*  filename,  char** buf);
 
-shader_t 
-shader_load(char* shader_name) {
-
-    shader_t shader;
+shader_p 
+shader_ctor(char* shader_name) {
     
-    char* vert_name;
-    char* frag_name;
-    char* vert_file;
-    char* frag_file;
+    shader_p shader = calloc(1, sizeof(shader));
     
-    asprintf(&vert_name, "shaders/%s.vert", shader_name);
-    asprintf(&frag_name, "shaders/%s.frag", shader_name);
+    char vert_name[256];
+    char frag_name[256];
+    char* vert_text;
+    char* frag_text;
     
-    load_file(vert_name, &vert_file);
-    load_file(frag_name, &frag_file);
+    sprintf(vert_name, "shaders/%s.vert", shader_name);
+    sprintf(frag_name, "shaders/%s.frag", shader_name);
+    
+    load_file(vert_name, &vert_text);
+    load_file(frag_name, &frag_text);
 
     GLuint vert_id = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vert_id, 1, (const char**)&vert_text, NULL);
@@ -31,21 +32,19 @@ shader_load(char* shader_name) {
     glCompileShader(frag_id);
     check_shader(frag_id);
 
-    shader.prog = glCreateProgram();
-    glAttachShader(shader.prog, vert_id);
-    glAttachShader(shader.prog, frag_id);
-    glLinkProgram(shader.prog);
+    shader->prog = glCreateProgram();
+    glAttachShader(shader->prog, vert_id);
+    glAttachShader(shader->prog, frag_id);
+    glLinkProgram (shader->prog);
 
     glDeleteShader(vert_id);
     glDeleteShader(frag_id);
     
-    shader.mvp = glGetUniformLocation(shader.prog, "mvp");
-    shader.col = glGetUniformLocation(shader.prog, "col");
-    shader.pos = glGetAttribLocation (shader.prog, "pos");
+    shader->mvp = glGetUniformLocation(shader->prog, "mvp");
+    shader->col = glGetUniformLocation(shader->prog, "col");
+    shader->pos = glGetAttribLocation (shader->prog, "pos");
 
     // cleanup
-    free(frag_name);
-    free(vert_name);
     free(frag_text);
     free(vert_text);
 
@@ -53,8 +52,20 @@ shader_load(char* shader_name) {
 }
 
 void
-shader_delete(shader_t shader) {
-    glDeleteProgram(shader.prog);
+shader_dtor(shader_p shader) {
+    glDeleteProgram(shader->prog);
+    free(shader);
+}
+
+void
+shader_start(shader_p shader) {
+    // SET SHADER
+    glUseProgram(shader->prog);
+}
+
+void
+shader_stop(shader_p shader) {
+	glUseProgram(0);
 }
 
 // draw loop

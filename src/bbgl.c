@@ -70,7 +70,7 @@ void bbgl_loop() {
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.0, 0.0, 0.0, 0.0);
 
-        scene_render();
+        scene_render(scene);
         gui_render();
         
         glfwSwapBuffers(win);
