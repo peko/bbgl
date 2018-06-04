@@ -37,28 +37,39 @@ scene_add_obj(scene_p scene, obj_p obj) {
     kv_push(obj_p, scene->objects, obj);
 }
 
-void print_vec(vec4 v) {
+/*
+static void print_vec(vec4 v) {
     for(int i=0;i<4;i++) printf("%f ",v[i]);
     printf("\n");
 }
-void print_mat(char* n, mat4x4 m){
+static void print_mat(char* n, mat4x4 m){
     printf("-%s-\n",n);
     for(int i=0;i<4;i++) print_vec(m[i]);
 }
+*/
 
 void 
 scene_render(scene_p scene) {
+
+    static int n = 0;
+    n++;
+    float x = 5.0*sin(n/100.0);
+    float z = 5.0*cos(n/100.0);
+    mat4x4_look_at(scene->v, 
+    	(vec3){  x,1.0,  z}, 
+    	(vec3){0.0,0.0,0.0},
+    	(vec3){0.0,1.0,0.0});
     shader_start(shader);
     for(size_t i=0; i<scene->objects.n; i++) {
         obj_p o = scene->objects.a[i];
         mat4x4 mvp;
         mat4x4_mul(mvp, scene->p, scene->v);
-        print_mat("p", scene->p);
-        print_mat("v", scene->v);
-        print_mat("m", o->m);
+        // print_mat("p", scene->p);
+        // print_mat("v", scene->v);
+        // print_mat("m", o->m);
         mat4x4_mul(mvp, mvp, o->m);
-        print_mat("mvp", mvp);
-        printf("%d\n", shader->mvp); 
+        // print_mat("mvp", mvp);
+        // printf("%d\n", shader->mvp); 
         glUniformMatrix4fv(shader->mvp, 1, GL_FALSE, (const GLfloat*) mvp);
 
         obj_render(o);
