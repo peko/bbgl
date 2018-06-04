@@ -1,6 +1,7 @@
 #pragma once
 
 #include <kvec.h>
+#include <linmath.h>
 
 #include "obj.h"
 
@@ -8,6 +9,7 @@ typedef kvec_t(obj_p) objects_v;
 
 typedef struct scene_t {
     objects_v objects;
+    mat4x4 p,v;
 } scene_t;
 typedef scene_t* scene_p;
 

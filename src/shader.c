@@ -41,8 +41,9 @@ shader_ctor(char* shader_name) {
     glDeleteShader(frag_id);
     
     shader->mvp = glGetUniformLocation(shader->prog, "mvp");
-    shader->col = glGetUniformLocation(shader->prog, "col");
-    shader->pos = glGetAttribLocation (shader->prog, "pos");
+    printf("mvp %d\n", shader->mvp);
+    // shader->col = glGetUniformLocation(shader->prog, "col");
+    // shader->pos = glGetAttribLocation (shader->prog, "pos");
 
     // cleanup
     free(frag_text);

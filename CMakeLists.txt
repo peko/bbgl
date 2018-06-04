@@ -13,11 +13,9 @@ pkg_search_module(GLFW REQUIRED glfw3)
 # NUKLEAR GUI
 set(nuklear lib/nuklear)
 
-# GL3W
 set(gl3w lib/gl3w)
-
-# klib
 set(klib lib/klib)
+set(linmath lib/linmath/)
 
 # library search path
 set(ENV{PKG_CONFIG_PATH} "$ENV{PKG_CONFIG_PATH}:/usr/local/lib/pkgconfig")
@@ -32,7 +30,8 @@ include_directories(
 	src 
 	${nuklear} ${nuklear}/demo/glfw_opengl3
     ${gl3w}
-    ${klib})
+    ${klib}
+    ${linmath})
 
 file(GLOB source_files "src/*.c")
 file(GLOB gl3w_files "${gl3w}/GL/*.c")

@@ -2053,6 +2053,8 @@ LIBS	lib/nuklear/example/Makefile	/^		LIBS := $(GLFW3) -lGL -lm -lGLU -lGLEW$/;"
 LIBS	lib/nuklear/example/Makefile	/^	LIBS := -lglfw3 -lopengl32 -lm -lGLU32 -lGLEW32$/;"	m
 LIBS	lib/nuklear/example/Makefile	/^LIBS :=$/;"	m
 LIKELY	lib/klib/ksw.c	/^#define LIKELY(/;"	d	file:
+LINMATH_H	lib/linmath/linmath.h	/^#define LINMATH_H$/;"	d
+LINMATH_H_DEFINE_VEC	lib/linmath/linmath.h	/^#define LINMATH_H_DEFINE_VEC(/;"	d
 MALLOC	lib/klib/keigen.c	/^#define MALLOC(/;"	d	file:
 MAX	lib/nuklear/demo/allegro5/main.c	/^#define MAX(/;"	d	file:
 MAX	lib/nuklear/demo/sdl_opengles2/main.c	/^#define MAX(/;"	d	file:
@@ -3932,6 +3934,7 @@ PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  de
 PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
+POINT_SIZE	src/obj.c	/^	#define POINT_SIZE /;"	d	file:
 PROGS	lib/klib/test/Makefile	/^PROGS=kbtree_test khash_keith khash_keith2 khash_test klist_test kseq_test kseq_bench \\$/;"	m
 Q0	lib/klib/khmm.h	/^	FLOAT Q0, **A, **E, *A0;$/;"	m	struct:__anonf542711f0308	typeref:typename:FLOAT
 QualityMode	lib/nuklear/demo/gdip/nuklear_gdip.h	/^} QualityMode;$/;"	t	typeref:enum:__anon66f154fe0303
@@ -7123,6 +7126,7 @@ initialized	lib/nuklear/demo/node_editor.c	/^    int initialized;$/;"	m	struct:n
 initialized	lib/nuklear/nuklear.h	/^    unsigned char initialized;$/;"	m	struct:nk_text_edit	typeref:typename:unsigned char
 initialized	lib/nuklear/src/nuklear.h	/^    unsigned char initialized;$/;"	m	struct:nk_text_edit	typeref:typename:unsigned char
 inline	lib/klib/kavl.h	/^#define inline /;"	d
+inline	lib/linmath/linmath.h	/^#define inline /;"	d
 innerHash	lib/klib/kurl.c	/^	uint8_t innerHash[HASH_LENGTH];$/;"	m	struct:sha1nfo	typeref:typename:uint8_t[]	file:
 input	lib/nuklear/nuklear.h	/^    struct nk_input input;$/;"	m	struct:nk_context	typeref:struct:nk_input
 input	lib/nuklear/src/nuklear.h	/^    struct nk_input input;$/;"	m	struct:nk_context	typeref:struct:nk_input
@@ -7650,6 +7654,7 @@ m	lib/klib/knhx.h	/^	size_t l, m;$/;"	m	struct:__kstring_t	typeref:typename:size
 m	lib/klib/kseq.h	/^	size_t l, m;$/;"	m	struct:__kstring_t	typeref:typename:size_t
 m	lib/klib/kstring.h	/^	size_t l, m;$/;"	m	struct:__kstring_t	typeref:typename:size_t
 m	lib/klib/kurl.c	/^typedef struct { int l, m; char *s; } kstring_t;$/;"	m	struct:__anonf630694b0408	typeref:typename:int	file:
+m	src/obj.h	/^    mat4x4 m;$/;"	m	struct:obj_t	typeref:typename:mat4x4
 m_buf	lib/klib/kurl.c	/^	int m_buf;    \/\/ max buffer size; for a remote file, CURL_MAX_WRITE_SIZE*2 is recommended$/;"	m	struct:kurl_t	typeref:typename:int	file:
 macro	lib/nuklear/src/build.py	/^        macro = sys.argv[cur_arg]$/;"	v
 macro	lib/nuklear/src/build.py	/^macro = ""$/;"	v
@@ -7710,6 +7715,33 @@ map_buffer_range_available	lib/nuklear/demo/x11_opengl3/nuklear_xlib_gl3.h	/^   
 marker	lib/nuklear/example/stb_image.h	/^   unsigned char  marker;      \/\/ marker seen while filling entropy buffer$/;"	m	struct:__anonc731c3c80608	typeref:typename:unsigned char
 marker	lib/nuklear/nuklear.h	/^    struct nk_buffer_marker marker[NK_BUFFER_MAX];$/;"	m	struct:nk_buffer	typeref:struct:nk_buffer_marker[]
 marker	lib/nuklear/src/nuklear.h	/^    struct nk_buffer_marker marker[NK_BUFFER_MAX];$/;"	m	struct:nk_buffer	typeref:struct:nk_buffer_marker[]
+mat4x4	lib/linmath/linmath.h	/^typedef vec4 mat4x4[4];$/;"	t	typeref:typename:vec4[4]
+mat4x4_add	lib/linmath/linmath.h	/^static inline void mat4x4_add(mat4x4 M, mat4x4 a, mat4x4 b)$/;"	f	typeref:typename:void
+mat4x4_col	lib/linmath/linmath.h	/^static inline void mat4x4_col(vec4 r, mat4x4 M, int i)$/;"	f	typeref:typename:void
+mat4x4_dup	lib/linmath/linmath.h	/^static inline void mat4x4_dup(mat4x4 M, mat4x4 N)$/;"	f	typeref:typename:void
+mat4x4_from_quat	lib/linmath/linmath.h	/^static inline void mat4x4_from_quat(mat4x4 M, quat q)$/;"	f	typeref:typename:void
+mat4x4_from_vec3_mul_outer	lib/linmath/linmath.h	/^static inline void mat4x4_from_vec3_mul_outer(mat4x4 M, vec3 a, vec3 b)$/;"	f	typeref:typename:void
+mat4x4_frustum	lib/linmath/linmath.h	/^static inline void mat4x4_frustum(mat4x4 M, float l, float r, float b, float t, float n, float f/;"	f	typeref:typename:void
+mat4x4_identity	lib/linmath/linmath.h	/^static inline void mat4x4_identity(mat4x4 M)$/;"	f	typeref:typename:void
+mat4x4_invert	lib/linmath/linmath.h	/^static inline void mat4x4_invert(mat4x4 T, mat4x4 M)$/;"	f	typeref:typename:void
+mat4x4_look_at	lib/linmath/linmath.h	/^static inline void mat4x4_look_at(mat4x4 m, vec3 eye, vec3 center, vec3 up)$/;"	f	typeref:typename:void
+mat4x4_mul	lib/linmath/linmath.h	/^static inline void mat4x4_mul(mat4x4 M, mat4x4 a, mat4x4 b)$/;"	f	typeref:typename:void
+mat4x4_mul_vec4	lib/linmath/linmath.h	/^static inline void mat4x4_mul_vec4(vec4 r, mat4x4 M, vec4 v)$/;"	f	typeref:typename:void
+mat4x4_ortho	lib/linmath/linmath.h	/^static inline void mat4x4_ortho(mat4x4 M, float l, float r, float b, float t, float n, float f)$/;"	f	typeref:typename:void
+mat4x4_orthonormalize	lib/linmath/linmath.h	/^static inline void mat4x4_orthonormalize(mat4x4 R, mat4x4 M)$/;"	f	typeref:typename:void
+mat4x4_perspective	lib/linmath/linmath.h	/^static inline void mat4x4_perspective(mat4x4 m, float y_fov, float aspect, float n, float f)$/;"	f	typeref:typename:void
+mat4x4_rotate	lib/linmath/linmath.h	/^static inline void mat4x4_rotate(mat4x4 R, mat4x4 M, float x, float y, float z, float angle)$/;"	f	typeref:typename:void
+mat4x4_rotate_X	lib/linmath/linmath.h	/^static inline void mat4x4_rotate_X(mat4x4 Q, mat4x4 M, float angle)$/;"	f	typeref:typename:void
+mat4x4_rotate_Y	lib/linmath/linmath.h	/^static inline void mat4x4_rotate_Y(mat4x4 Q, mat4x4 M, float angle)$/;"	f	typeref:typename:void
+mat4x4_rotate_Z	lib/linmath/linmath.h	/^static inline void mat4x4_rotate_Z(mat4x4 Q, mat4x4 M, float angle)$/;"	f	typeref:typename:void
+mat4x4_row	lib/linmath/linmath.h	/^static inline void mat4x4_row(vec4 r, mat4x4 M, int i)$/;"	f	typeref:typename:void
+mat4x4_scale	lib/linmath/linmath.h	/^static inline void mat4x4_scale(mat4x4 M, mat4x4 a, float k)$/;"	f	typeref:typename:void
+mat4x4_scale_aniso	lib/linmath/linmath.h	/^static inline void mat4x4_scale_aniso(mat4x4 M, mat4x4 a, float x, float y, float z)$/;"	f	typeref:typename:void
+mat4x4_sub	lib/linmath/linmath.h	/^static inline void mat4x4_sub(mat4x4 M, mat4x4 a, mat4x4 b)$/;"	f	typeref:typename:void
+mat4x4_translate	lib/linmath/linmath.h	/^static inline void mat4x4_translate(mat4x4 T, float x, float y, float z)$/;"	f	typeref:typename:void
+mat4x4_translate_in_place	lib/linmath/linmath.h	/^static inline void mat4x4_translate_in_place(mat4x4 M, float x, float y, float z)$/;"	f	typeref:typename:void
+mat4x4_transpose	lib/linmath/linmath.h	/^static inline void mat4x4_transpose(mat4x4 M, mat4x4 N)$/;"	f	typeref:typename:void
+mat4x4o_mul_quat	lib/linmath/linmath.h	/^static inline void mat4x4o_mul_quat(mat4x4 R, mat4x4 M, quat q)$/;"	f	typeref:typename:void
 math.bernstein_poly	lib/klib/lua/klib.lua	/^function math.bernstein_poly(beta)$/;"	f
 math.erfc	lib/klib/lua/klib.lua	/^function math.erfc(x)$/;"	f
 math.fisher_exact	lib/klib/lua/klib.lua	/^function math.fisher_exact(n11, n12, n21, n22)$/;"	f
@@ -10338,9 +10370,10 @@ num_nodes	lib/nuklear/src/nuklear_font.c	/^    int num_nodes;$/;"	m	struct:nk_rp
 num_remaining_in_head_chunk	lib/nuklear/nuklear.h	/^    int    num_remaining_in_head_chunk;$/;"	m	struct:nk_tt__hheap	typeref:typename:int
 num_remaining_in_head_chunk	lib/nuklear/src/nuklear_font.c	/^    int    num_remaining_in_head_chunk;$/;"	m	struct:nk_tt__hheap	typeref:typename:int	file:
 obj_ctor	src/obj.c	/^obj_ctor() {$/;"	f	typeref:typename:obj_p
-obj_draw	src/obj.c	/^void obj_draw(obj_p obj) {$/;"	f	typeref:typename:void
-obj_dtor	src/obj.c	/^obj_p obj_dtor(obj_p obj){$/;"	f	typeref:typename:obj_p
+obj_dtor	src/obj.c	/^obj_dtor(obj_p obj) {$/;"	f	typeref:typename:void
 obj_p	src/obj.h	/^typedef obj_t* obj_p;$/;"	t	typeref:typename:obj_t *
+obj_plane	src/obj.c	/^obj_plane() {$/;"	f	typeref:typename:obj_p
+obj_render	src/obj.c	/^obj_render(obj_p obj) {$/;"	f	typeref:typename:void
 obj_t	src/obj.h	/^typedef struct obj_t {$/;"	s
 obj_t	src/obj.h	/^} obj_t;$/;"	t	typeref:struct:obj_t
 objects	src/scene.h	/^    objects_v objects;$/;"	m	struct:scene_t	typeref:typename:objects_v
@@ -10412,6 +10445,7 @@ p	lib/klib/khmm.h	/^	int *p; \/\/ posterior decoding$/;"	m	struct:__anonf542711f
 p	lib/klib/kstring.h	/^	const char *p; \/\/ end of the current token$/;"	m	struct:__anon959017540108	typeref:typename:const char *
 p	lib/nuklear/nuklear.h	/^    struct nk_font_config *p;$/;"	m	struct:nk_font_config	typeref:struct:nk_font_config *
 p	lib/nuklear/src/nuklear.h	/^    struct nk_font_config *p;$/;"	m	struct:nk_font_config	typeref:struct:nk_font_config *
+p	src/scene.h	/^    mat4x4 p,v;$/;"	m	struct:scene_t	typeref:typename:mat4x4
 p_buf	lib/klib/kurl.c	/^	int p_buf;    \/\/ file position in the buffer; p_buf <= l_buf$/;"	m	struct:kurl_t	typeref:typename:int	file:
 packInt32	lib/klib/bgzf.c	/^static inline void packInt32(uint8_t *buffer, uint32_t value)$/;"	f	typeref:typename:void	file:
 pack_info	lib/nuklear/nuklear.h	/^    void *pack_info;$/;"	m	struct:nk_tt_pack_context	typeref:typename:void *
@@ -10616,6 +10650,18 @@ qlen	lib/klib/ksw.c	/^	int qlen, slen;$/;"	m	struct:_kswq_t	typeref:typename:int
 qnxnto	build/CMakeFiles/3.11.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 qnxnto	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v	typeref:typename:char const *
 qp	lib/klib/ksw.c	/^	__m128i *qp, *H0, *H1, *E, *Hmax;$/;"	m	struct:_kswq_t	typeref:typename:__m128i *	file:
+quat	lib/linmath/linmath.h	/^typedef float quat[4];$/;"	t	typeref:typename:float[4]
+quat_add	lib/linmath/linmath.h	/^static inline void quat_add(quat r, quat a, quat b)$/;"	f	typeref:typename:void
+quat_conj	lib/linmath/linmath.h	/^static inline void quat_conj(quat r, quat q)$/;"	f	typeref:typename:void
+quat_from_mat4x4	lib/linmath/linmath.h	/^static inline void quat_from_mat4x4(quat q, mat4x4 M)$/;"	f	typeref:typename:void
+quat_identity	lib/linmath/linmath.h	/^static inline void quat_identity(quat q)$/;"	f	typeref:typename:void
+quat_inner_product	lib/linmath/linmath.h	/^static inline float quat_inner_product(quat a, quat b)$/;"	f	typeref:typename:float
+quat_mul	lib/linmath/linmath.h	/^static inline void quat_mul(quat r, quat p, quat q)$/;"	f	typeref:typename:void
+quat_mul_vec3	lib/linmath/linmath.h	/^static inline void quat_mul_vec3(vec3 r, quat q, vec3 v)$/;"	f	typeref:typename:void
+quat_norm	lib/linmath/linmath.h	/^#define quat_norm /;"	d
+quat_rotate	lib/linmath/linmath.h	/^static inline void quat_rotate(quat r, float angle, vec3 axis) {$/;"	f	typeref:typename:void
+quat_scale	lib/linmath/linmath.h	/^static inline void quat_scale(quat r, quat v, float s)$/;"	f	typeref:typename:void
+quat_sub	lib/linmath/linmath.h	/^static inline void quat_sub(quat r, quat a, quat b)$/;"	f	typeref:typename:void
 query	lib/nuklear/nuklear.h	/^    nk_query_font_glyph_f query;$/;"	m	struct:nk_user_font	typeref:typename:nk_query_font_glyph_f
 query	lib/nuklear/src/nuklear.h	/^    nk_query_font_glyph_f query;$/;"	m	struct:nk_user_font	typeref:typename:nk_query_font_glyph_f
 quickSort	lib/klib/test/ksort_test.cc	/^void quickSort (int numbers[], int qty) {$/;"	f	typeref:typename:void
@@ -10869,9 +10915,12 @@ sha1_write	lib/klib/kurl.c	/^void sha1_write(sha1nfo *s, const char *data, size_
 sha1_write1	lib/klib/kurl.c	/^void sha1_write1(sha1nfo *s, uint8_t data)$/;"	f	typeref:typename:void
 sha1nfo	lib/klib/kurl.c	/^typedef struct sha1nfo {$/;"	s	file:
 sha1nfo	lib/klib/kurl.c	/^} sha1nfo;$/;"	t	typeref:struct:sha1nfo	file:
-shader	src/obj.h	/^    shader_t shader;$/;"	m	struct:obj_t	typeref:typename:shader_t
-shader_delete	src/shader.c	/^shader_delete(shader_t shader) {$/;"	f	typeref:typename:void
-shader_load	src/shader.c	/^shader_load(char* shader_name) {$/;"	f	typeref:typename:shader_t
+shader	src/scene.c	/^shader_p shader;$/;"	v	typeref:typename:shader_p
+shader_ctor	src/shader.c	/^shader_ctor(char* shader_name) {$/;"	f	typeref:typename:shader_p
+shader_dtor	src/shader.c	/^shader_dtor(shader_p shader) {$/;"	f	typeref:typename:void
+shader_p	src/shader.h	/^typedef shader_t* shader_p;$/;"	t	typeref:typename:shader_t *
+shader_start	src/shader.c	/^shader_start(shader_p shader) {$/;"	f	typeref:typename:void
+shader_stop	src/shader.c	/^shader_stop(shader_p shader) {$/;"	f	typeref:typename:void
 shader_t	src/shader.h	/^} shader_t;$/;"	t	typeref:struct:__anonfcf7e1690108
 shape_AA	lib/nuklear/nuklear.h	/^    enum nk_anti_aliasing shape_AA; \/* shape anti-aliasing flag can be turned off if you are ti/;"	m	struct:nk_convert_config	typeref:enum:nk_anti_aliasing
 shape_AA	lib/nuklear/nuklear.h	/^    enum nk_anti_aliasing shape_AA;$/;"	m	struct:nk_draw_list	typeref:enum:nk_anti_aliasing
@@ -10915,6 +10964,7 @@ size	lib/nuklear/src/nuklear.h	/^    unsigned int size;$/;"	m	struct:nk_page	typ
 size	lib/nuklear/src/nuklear.h	/^    unsigned int size;$/;"	m	struct:nk_table	typeref:typename:unsigned int
 size	lib/nuklear/src/nuklear.h	/^struct nk_cursor {struct nk_image img; struct nk_vec2 size, offset;};$/;"	m	struct:nk_cursor	typeref:struct:nk_vec2
 size	lib/nuklear/src/nuklear.h	/^struct nk_memory {void *ptr;nk_size size;};$/;"	m	struct:nk_memory	typeref:typename:nk_size
+size	src/obj.h	/^    size_t size;$/;"	m	struct:obj_t	typeref:typename:size_t
 size_cmd	lib/klib/knetfile.h	/^	char *response, *retr, *size_cmd;$/;"	m	struct:knetFile_s	typeref:typename:char ***
 skin	lib/nuklear/example/skinning.c	/^    GLint skin;$/;"	m	struct:media	typeref:typename:GLint	file:
 skinning	lib/nuklear/example/Makefile	/^skinning: generate$/;"	t
@@ -10978,6 +11028,24 @@ src/main.c.s	build/Makefile	/^src\/main.c.s:$/;"	t
 src/main.i	build/Makefile	/^src\/main.i: src\/main.c.i$/;"	t
 src/main.o	build/Makefile	/^src\/main.o: src\/main.c.o$/;"	t
 src/main.s	build/Makefile	/^src\/main.s: src\/main.c.s$/;"	t
+src/obj.c.i	build/Makefile	/^src\/obj.c.i:$/;"	t
+src/obj.c.o	build/Makefile	/^src\/obj.c.o:$/;"	t
+src/obj.c.s	build/Makefile	/^src\/obj.c.s:$/;"	t
+src/obj.i	build/Makefile	/^src\/obj.i: src\/obj.c.i$/;"	t
+src/obj.o	build/Makefile	/^src\/obj.o: src\/obj.c.o$/;"	t
+src/obj.s	build/Makefile	/^src\/obj.s: src\/obj.c.s$/;"	t
+src/scene.c.i	build/Makefile	/^src\/scene.c.i:$/;"	t
+src/scene.c.o	build/Makefile	/^src\/scene.c.o:$/;"	t
+src/scene.c.s	build/Makefile	/^src\/scene.c.s:$/;"	t
+src/scene.i	build/Makefile	/^src\/scene.i: src\/scene.c.i$/;"	t
+src/scene.o	build/Makefile	/^src\/scene.o: src\/scene.c.o$/;"	t
+src/scene.s	build/Makefile	/^src\/scene.s: src\/scene.c.s$/;"	t
+src/shader.c.i	build/Makefile	/^src\/shader.c.i:$/;"	t
+src/shader.c.o	build/Makefile	/^src\/shader.c.o:$/;"	t
+src/shader.c.s	build/Makefile	/^src\/shader.c.s:$/;"	t
+src/shader.i	build/Makefile	/^src\/shader.i: src\/shader.c.i$/;"	t
+src/shader.o	build/Makefile	/^src\/shader.o: src\/shader.c.o$/;"	t
+src/shader.s	build/Makefile	/^src\/shader.s: src\/shader.c.s$/;"	t
 sse2_bit_count32	lib/klib/test/kbit_test.c	/^static uint32_t sse2_bit_count32(const __m128i* block, const __m128i* block_end)$/;"	f	typeref:typename:uint32_t	file:
 stack	lib/klib/kbtree.h	/^	kbpos_t stack[KB_MAX_DEPTH], *p;$/;"	m	struct:__anon929281af0308	typeref:typename:kbpos_t[]
 stacks	lib/nuklear/nuklear.h	/^    struct nk_configuration_stacks stacks;$/;"	m	struct:nk_context	typeref:struct:nk_configuration_stacks
@@ -11563,6 +11631,7 @@ uv	lib/nuklear/src/nuklear.h	/^    struct nk_vec2 uv[2];$/;"	m	struct:nk_user_fo
 v	lib/klib/khmm.h	/^	int *v; \/\/ Viterbi path$/;"	m	struct:__anonf542711f0208	typeref:typename:int *
 v	lib/klib/kson.h	/^	} v;$/;"	m	struct:kson_node_s	typeref:union:kson_node_s::__anonf60a9bad010a
 v	lib/nuklear/example/stb_image.h	/^      int h,v;$/;"	m	struct:__anonc731c3c80608::__anonc731c3c80708	typeref:typename:int
+v	src/scene.h	/^    mat4x4 p,v;$/;"	m	struct:scene_t	typeref:typename:mat4x4
 v0	lib/nuklear/nuklear.h	/^    float u0, v0, u1, v1;$/;"	m	struct:nk_font_glyph	typeref:typename:float
 v0	lib/nuklear/src/nuklear.h	/^    float u0, v0, u1, v1;$/;"	m	struct:nk_font_glyph	typeref:typename:float
 v1	lib/nuklear/nuklear.h	/^    float u0, v0, u1, v1;$/;"	m	struct:nk_font_glyph	typeref:typename:float
@@ -11596,6 +11665,7 @@ vao	lib/nuklear/example/canvas.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device
 vao	lib/nuklear/example/extended.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vao	lib/nuklear/example/file_browser.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vao	lib/nuklear/example/skinning.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
+vao	src/obj.h	/^    GLuint vao;$/;"	m	struct:obj_t	typeref:typename:GLuint
 vbo	lib/nuklear/demo/glfw_opengl3/nuklear_glfw_gl3.h	/^    GLuint vbo, vao, ebo;$/;"	m	struct:nk_glfw_device	typeref:typename:GLuint
 vbo	lib/nuklear/demo/glfw_opengl4/nuklear_glfw_gl4.h	/^    GLuint vbo, vao, ebo;$/;"	m	struct:nk_glfw_device	typeref:typename:GLuint
 vbo	lib/nuklear/demo/sdl_opengl3/nuklear_sdl_gl3.h	/^    GLuint vbo, vao, ebo;$/;"	m	struct:nk_sdl_device	typeref:typename:GLuint
@@ -11606,8 +11676,12 @@ vbo	lib/nuklear/example/canvas.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device
 vbo	lib/nuklear/example/extended.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vbo	lib/nuklear/example/file_browser.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vbo	lib/nuklear/example/skinning.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
-vbo	src/obj.h	/^    vbo_t    vbo;   $/;"	m	struct:obj_t	typeref:typename:vbo_t
+vbo	src/obj.h	/^    GLuint vbo;$/;"	m	struct:obj_t	typeref:typename:GLuint
 vc	lib/nuklear/demo/sdl_opengles2/nuklear_sdl_gles2.h	/^    size_t vp, vt, vc;$/;"	m	struct:nk_sdl_device	typeref:typename:size_t
+vec3_mul_cross	lib/linmath/linmath.h	/^static inline void vec3_mul_cross(vec3 r, vec3 const a, vec3 const b)$/;"	f
+vec3_reflect	lib/linmath/linmath.h	/^static inline void vec3_reflect(vec3 r, vec3 const v, vec3 const n)$/;"	f	typeref:typename:void
+vec4_mul_cross	lib/linmath/linmath.h	/^static inline void vec4_mul_cross(vec4 r, vec4 a, vec4 b)$/;"	f	typeref:typename:void
+vec4_reflect	lib/linmath/linmath.h	/^static inline void vec4_reflect(vec4 r, vec4 v, vec4 n)$/;"	f	typeref:typename:void
 vectors	lib/nuklear/nuklear.h	/^    struct nk_config_stack_vec2 vectors;$/;"	m	struct:nk_configuration_stacks	typeref:struct:nk_config_stack_vec2
 vectors	lib/nuklear/src/nuklear.h	/^    struct nk_config_stack_vec2 vectors;$/;"	m	struct:nk_configuration_stacks	typeref:struct:nk_config_stack_vec2
 vendor	lib/nuklear/demo/x11_opengl3/nuklear_xlib_gl3.h	/^    enum graphics_card_vendors vendor;$/;"	m	struct:opengl_info	typeref:enum:graphics_card_vendors

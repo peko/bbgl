@@ -6,6 +6,7 @@
 obj_p
 obj_ctor() {
     obj_p obj = calloc(1, sizeof(obj_t));
+    mat4x4_identity(obj->m);
 	return obj;
 }
 
