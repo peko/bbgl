@@ -1,0 +1,6 @@
+[submodule "lib/klib"]
+	path = lib/klib
+	url = https://github.com/attractivechaos/klib
+[submodule "lib/nuklear"]
+	path = lib/nuklear
+	url = https://github.com/vurtun/nuklear
