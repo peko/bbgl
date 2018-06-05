@@ -7,7 +7,7 @@ Dependencies
 ------------
 
  * GLFW
- * nuklear GUI
+ * imgui
  * gl3w
  * OpenGL 3.3
  * klib
