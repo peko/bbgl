@@ -32,12 +32,15 @@ void gui_init(GLFWwindow* win) {
 }
 
 void gui_update(){
-     ImGui_ImplGlfwGL3_NewFrame();
-     igBegin("Test", NULL, 0);
-     // igBegin("Stream widget", NULL, 0);
-     igText("Test");
-     igButton("Test",(struct ImVec2){0,0});
-     igEnd();
+    ImGui_ImplGlfwGL3_NewFrame();
+    igBegin("Test", NULL, 0);
+    // igBegin("Stream widget", NULL, 0);
+    igText("Test");
+    igButton("Test",(struct ImVec2){0,0});
+    igEnd();
+
+	igSetNextWindowPos((struct ImVec2){0,0}, ImGuiCond_FirstUseEver,(struct ImVec2){0,0} ); // Normally user code doesn't need/want to call this because positions are saved in .ini file anyway. Here we just want to make the demo initial state a bit more friendly!
+	igShowDemoWindow(NULL);
 }
 
 void gui_render(){
