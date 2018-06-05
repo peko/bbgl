@@ -4,3 +4,6 @@
 [submodule "lib/nuklear"]
 	path = lib/nuklear
 	url = https://github.com/vurtun/nuklear
+[submodule "lib/cimgui"]
+	path = lib/cimgui
+	url = https://github.com/Extrawurst/cimgui
