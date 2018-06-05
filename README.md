@@ -1,13 +1,13 @@
 Bare Bone GL 3.3 app on C
 =========================
 
-![](scrsht.png)
+![](screen.png)
 
 Dependencies
 ------------
 
  * GLFW
- * nuklear GUI
+ * nuklear ((imgui fork)[https://github.com/peko/bbgl/tree/cimgui])
  * gl3w
  * OpenGL 3.3
  * klib
