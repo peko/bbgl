@@ -13,8 +13,7 @@ pkg_search_module(GLFW REQUIRED glfw3)
 # NUKLEAR GUI
 set(nuklear lib/nuklear)
 
-
-set(cimgui lib/cimgui/cimgui)
+set(cimgui lib/cimgui)
 set(gl3w lib/gl3w)
 set(klib lib/klib)
 set(linmath lib/linmath/)
@@ -30,15 +29,15 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Wall -g")
 # Include dirs
 include_directories(
 	src
-    ${cimgui}     
+    ${cimgui} ${cimgui}/imgui 
 	${nuklear} ${nuklear}/demo/glfw_opengl3
     ${gl3w}
     ${klib}
     ${linmath})
 
-file(GLOB cimgui_files "${cimgui}/*.cpp")
+file(GLOB cimgui_files "${cimgui}/cimgui/*.cpp" "${cimgui}/imgui/*.cpp")
 add_library(cimgui ${cimgui_files})
-	
+add_library(cimgui_impl ${cimgui}/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp)
 
 file(GLOB source_files "src/*.c")
 file(GLOB gl3w_files "${gl3w}/GL/*.c")
@@ -51,6 +50,6 @@ add_executable(
 target_link_libraries(
 	${project_name}
     ${GLFW_LIBRARIES}
-	m GL dl cimgui)
+	m GL dl cimgui cimgui_impl)
 
 
