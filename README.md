@@ -7,7 +7,7 @@ Dependencies
 ------------
 
  * GLFW
- * nuklear ([imgui fork](/tree/cimgui))
+ * nuklear ([imgui fork](https://github.com/peko/bbgl/tree/cimgui))
  * gl3w
  * OpenGL 3.3
  * klib
