@@ -7,7 +7,7 @@ Dependencies
 ------------
 
  * GLFW
- * imgui
+ * (c)imgui
  * gl3w
  * OpenGL 3.3
  * klib
