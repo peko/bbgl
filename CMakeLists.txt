@@ -14,6 +14,7 @@ pkg_search_module(GLFW REQUIRED glfw3)
 set(nuklear lib/nuklear)
 
 set(cimgui lib/cimgui)
+set(imgui_impl lib/imgui_gl3)
 set(gl3w lib/gl3w)
 set(klib lib/klib)
 set(linmath lib/linmath/)
@@ -37,7 +38,7 @@ include_directories(
 
 file(GLOB cimgui_files "${cimgui}/cimgui/*.cpp" "${cimgui}/imgui/*.cpp")
 add_library(cimgui ${cimgui_files})
-add_library(cimgui_impl ${cimgui}/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp)
+add_library(imgui_impl ${imgui_impl}/imgui_impl_glfw_gl3.cpp)
 
 file(GLOB source_files "src/*.c")
 file(GLOB gl3w_files "${gl3w}/GL/*.c")
@@ -50,6 +51,6 @@ add_executable(
 target_link_libraries(
 	${project_name}
     ${GLFW_LIBRARIES}
-	m GL dl cimgui cimgui_impl)
+	m GL dl cimgui imgui_impl)
 
 
