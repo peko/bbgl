@@ -1,4 +1,5 @@
 #include "Scene.h"
+#include "Shape.h"
 #include "Drawable.h"
 #include "Shader.h"
 
@@ -16,8 +17,8 @@ Init(Scene* outScene){
     	(vec3){0.0,1.0,0.0});
 
     shader = AShader->Create("simple");
-    Drawable* d = ADrawable->Create();
-    AddObject(outScene, d);
+    Shape* s = AShape->Create();
+    AddObject(outScene, s->drawable);
 }
 
 static Scene*

@@ -5,10 +5,11 @@
 
 typedef struct Drawable Drawable;
 struct Drawable {
-    GLuint vao;
-    GLuint vbo;
-    mat4x4 m;
-    size_t size;
+    GLuint  vao;
+    GLuint  vbo;
+    mat4x4  m;
+    GLenum  mode;
+    GLsizei size;
 };
 
 struct ADrawable {
