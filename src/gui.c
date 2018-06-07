@@ -15,7 +15,7 @@
 
 #define CIMGUI_DEFINE_ENUMS_AND_STRUCTS
 #include <cimgui/cimgui.h>
-#include <imgui/examples/opengl3_example/imgui_impl_glfw_gl3.h>
+#include <imgui_impl_glfw_gl3.h>
 
 struct ImGuiContext* ctx;
 struct ImGuiIO* io; 

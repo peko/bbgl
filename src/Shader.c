@@ -1,15 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "shader.h"
+#include "Shader.h"
 
 static void check_shader(GLuint sid);
 static void load_file( char*  filename,  char** buf);
 
-shader_p 
-shader_ctor(char* shader_name) {
-    
-    shader_p shader = calloc(1, sizeof(shader));
+static Shader*
+Init(Shader* outShader) {
     
     char vert_name[256];
     char frag_name[256];
@@ -48,26 +46,40 @@ shader_ctor(char* shader_name) {
     // cleanup
     free(frag_text);
     free(vert_text);
+}
 
+static Shader* 
+Create(char* name) {
+    Shader* shader = malloc(sizeof(Shader));
+	Init(shader, name)
     return shader;
 }
 
-void
-shader_dtor(shader_p shader) {
+static void
+Release(Shader* shader) {
     glDeleteProgram(shader->prog);
     free(shader);
 }
 
-void
-shader_start(shader_p shader) {
+static void
+Start(Shader* shader) {
     // SET SHADER
     glUseProgram(shader->prog);
 }
 
-void
-shader_stop(shader_p shader) {
+static void
+Stop(Shader* shader) {
 	glUseProgram(0);
 }
+
+struct AShader AShader[1] = {{
+	Create,
+	Init,
+	Release,
+	Start,
+	Stop,
+}}
+
 
 // draw loop
 /*

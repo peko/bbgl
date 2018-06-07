@@ -15,7 +15,7 @@
 
 #include "bbgl.h"
 #include "gui.h"
-#include "scene.h"
+#include "Scene.h"
 
 #define WINDOW_WIDTH 1200
 #define WINDOW_HEIGHT 800
@@ -26,7 +26,7 @@ static void error_callback(int e, const char *d)
 /* Platform */
 static GLFWwindow *win;
 int width = 0, height = 0;
-scene_p scene;
+Scene* scene;
 
 void bbgl_init() {
 
@@ -53,7 +53,7 @@ void bbgl_init() {
     //     exit(1);
     // }
     
-    scene = scene_ctor();
+    scene = AScene->Create();
     gui_init(win);
 }
 
@@ -70,14 +70,14 @@ void bbgl_loop() {
         glClear(GL_COLOR_BUFFER_BIT);
         glClearColor(0.0, 0.0, 0.0, 0.0);
 
-        scene_render(scene);
+        AScene->Render(scene);
         gui_render();
         
         glfwSwapBuffers(win);
     }
 
     // cleanup
-    scene_dtor(scene);
+    AScene->Release(scene);
     gui_terminate();
     glfwTerminate();
 }

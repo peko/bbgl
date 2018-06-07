@@ -1,26 +1,33 @@
 #include <stdlib.h>
 #include <GL/gl3w.h>
 
-#include "obj.h"
+#include "Drawable.h"
 
-obj_p
-obj_ctor() {
-    obj_p obj = calloc(1, sizeof(obj_t));
-    mat4x4_identity(obj->m);
-	return obj;
+void InitPlane(Drawable* outDrawable);
+
+static void
+Init(Drawable *outDrawable) {
+    mat4x4_identity(outDrawable->m);
+    InitPlane(outDrawable);
+}
+
+static Drawable* 
+Create() {
+    Drawable* drawable = malloc(sizeof(Drawable));
+    Init(drawable);
+    return drawable;
+}
+
+static void
+Release(Drawable* drawable) {
+    glDeleteBuffers(1, &drawable->vbo);
+    glDeleteVertexArrays(1, &drawable->vao);
+    free(drawable);
 }
 
 void
-obj_dtor(obj_p obj) {
-    glDeleteBuffers(1, &obj->vbo);
-    glDeleteVertexArrays(1, &obj->vao);
-	free(obj);
-}
-
-obj_p 
-obj_plane() {
-	obj_p obj = obj_ctor();
-	#define POINT_SIZE 10
+InitPlane(Drawable* outDrawable) {
+    #define POINT_SIZE 10
     const float pos_col_uv[4][POINT_SIZE] = {
         // pos                  col                   uv
         {-1.0,-1.0, 0.0, 1.0,   1.0, 0.0, 0.0, 1.0,   0.0, 0.0},
@@ -28,16 +35,16 @@ obj_plane() {
         { 1.0,-1.0, 0.0, 1.0,   0.0, 0.0, 1.0, 1.0,   1.0, 1.0},
         { 1.0, 1.0, 0.0, 1.0,   0.0, 1.0, 1.0, 1.0,   1.0, 0.0},
     };
-    obj->size = 4;
+    outDrawable->size = 4;
     
     // allocate vertex array and bind it
     // https://stackoverflow.com/questions/16380005/opengl-3-4-glvertexattribpointer-stride-and-offset-miscalculation 
-    glGenVertexArrays(1, &obj->vao);
-    glBindVertexArray(obj->vao);
+    glGenVertexArrays(1, &outDrawable->vao);
+    glBindVertexArray(outDrawable->vao);
     {
         // allocate buffer objects for coordinates, colors and uvs
-        glGenBuffers(1, &obj->vbo);
-        glBindBuffer(GL_ARRAY_BUFFER, obj->vbo);
+        glGenBuffers(1, &outDrawable->vbo);
+        glBindBuffer(GL_ARRAY_BUFFER, outDrawable->vbo);
         glBufferData(GL_ARRAY_BUFFER, sizeof(pos_col_uv), pos_col_uv, GL_STATIC_DRAW);       
         glVertexAttribPointer(0, 4, GL_FLOAT, GL_FALSE, POINT_SIZE*sizeof(float), (GLvoid*)(0*sizeof(GLfloat))); glEnableVertexAttribArray(0);
         glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, POINT_SIZE*sizeof(float), (GLvoid*)(4*sizeof(GLfloat))); glEnableVertexAttribArray(1);
@@ -46,17 +53,24 @@ obj_plane() {
     // unbind vbo & vao
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
-
-    return obj;
 }
 
-void 
-obj_render(obj_p obj) {
-    glBindVertexArray(obj->vao);
+static void 
+Render(Drawable* drawable) {
+    glBindVertexArray(drawable->vao);
     //glEnableVertexAttribArray(0);
     //glEnableVertexAttribArray(1);
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, obj->size);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, drawable->size);
     //glDisableVertexAttribArray(1); 
     //glDisableVertexAttribArray(0);
     glBindVertexArray(0);
 }
+
+// ----------------------------------------------------------------------------
+
+struct ADrawable ADrawable[1] = {{
+    .Create  = Create,
+    .Init    = Init,
+    .Release = Release,
+    .Render  = Render
+}};

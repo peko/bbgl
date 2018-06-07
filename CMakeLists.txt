@@ -25,12 +25,12 @@ set(ENV{LD_LIBRARY_PATH} "ENV{LD_LIBRARY_PATH}:/usr/local/lib")
 
 # build dir
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99 -Wall -g")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11 -Wall -g")
 
 # Include dirs
 include_directories(
 	src
-    ${cimgui} ${cimgui}/imgui 
+    ${cimgui} ${cimgui}/imgui ${imgui_impl}
 	${nuklear} ${nuklear}/demo/glfw_opengl3
     ${gl3w}
     ${klib}
