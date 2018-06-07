@@ -1,6 +1,6 @@
-#include "bbgl.h"
+#include "App.h"
 
 int main(int argc, char** argv) {
-    bbgl_init();
-    bbgl_loop();
+    AApp->Init();
+    AApp->Loop();
 }

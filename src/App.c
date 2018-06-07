@@ -13,7 +13,7 @@
 #include <GL/gl3w.h>
 #include <GLFW/glfw3.h>
 
-#include "bbgl.h"
+#include "App.h"
 #include "Gui.h"
 #include "Scene.h"
 
@@ -28,7 +28,8 @@ static GLFWwindow *win;
 int width = 0, height = 0;
 Scene* scene;
 
-void bbgl_init() {
+static void 
+Init() {
 
     /* GLFW */
     glfwSetErrorCallback(error_callback);
@@ -57,7 +58,8 @@ void bbgl_init() {
     AGui->Init(win);
 }
 
-void bbgl_loop() {
+static void 
+Loop() {
     
     while (!glfwWindowShouldClose(win)) {
         /* Input */
@@ -83,3 +85,7 @@ void bbgl_loop() {
     glfwTerminate();
 }
 
+struct AApp AApp[1] = {{
+	Init,
+	Loop
+}};

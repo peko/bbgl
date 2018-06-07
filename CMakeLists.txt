@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
 
-set(project_name bbgl)
+set(project_name app)
 project(${project_name})
 
 # GLFW
