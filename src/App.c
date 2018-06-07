@@ -28,6 +28,8 @@ static GLFWwindow *win;
 int width = 0, height = 0;
 Scene* scene;
 
+static void onResize(GLFWwindow*, int, int);
+
 static void 
 Init() {
 
@@ -44,8 +46,9 @@ Init() {
     win = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "BBGL3", NULL, NULL);
     glfwMakeContextCurrent(win);
     gl3wInit();
+    glfwSetWindowSizeCallback(win, onResize);
     glfwGetWindowSize(win, &width, &height);
-   
+     
     /* OpenGL */
     glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
     // glewExperimental = 1;
@@ -55,7 +58,14 @@ Init() {
     // }
     
     scene = AScene->Create();
+    AScene->Resize(scene, width,height);
     AGui->Init(win);
+}
+
+
+static void 
+onResize(GLFWwindow* win, int width, int height) {
+    AScene->Resize(scene, width, height);
 }
 
 static void 
@@ -86,6 +96,6 @@ Loop() {
 }
 
 struct AApp AApp[1] = {{
-	Init,
-	Loop
+    Init,
+    Loop
 }};

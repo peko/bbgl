@@ -6,16 +6,12 @@
 Shader* shader;
 
 static void AddObject(Scene*, Drawable*);
+static void Resize(Scene*, int, int);
 
 static void
 Init(Scene* outScene){
     kv_init(outScene->objects);
-    mat4x4_perspective(outScene->p, 30, 1.0, 0.0001, 1000.0);
-    mat4x4_look_at(outScene->v, 
-    	(vec3){1.0,1.0,1.0}, 
-    	(vec3){0.0,0.0,0.0},
-    	(vec3){0.0,1.0,0.0});
-
+    Resize(outScene, 320, 240);
     shader = AShader->Create("simple");
     Shape* s = AShape->Create();
     AddObject(outScene, s->drawable);
@@ -42,6 +38,17 @@ Release(Scene* scene) {
 static void
 AddObject(Scene* scene, Drawable* d) {
     kv_push(Drawable*, scene->objects, d);
+}
+
+static void 
+Resize(Scene* outScene, int width, int height) {
+    printf("%d %d\n", width, height);
+	outScene->ratio = (float)width/height;
+    mat4x4_perspective(outScene->p, 30, 1.0, 0.0001, 1000.0);
+    mat4x4_look_at(outScene->v, 
+    	(vec3){1.0,1.0,1.0}, 
+    	(vec3){0.0,0.0,0.0},
+    	(vec3){0.0,1.0,0.0});
 }
 
 static void 
@@ -75,5 +82,6 @@ struct AScene AScene[1] = {{
 	Init,
 	Release,
 	Render,
+	Resize,
 	AddObject,
 }};
