@@ -66,6 +66,8 @@ $(VERBOSE).SILENT	build/Makefile	/^$(VERBOSE).SILENT:$/;"	t
 A	lib/klib/khmm.h	/^	FLOAT Q0, **A, **E, *A0;$/;"	m	struct:__anonf542711f0308	typeref:typename:FLOAT **
 A	lib/nuklear/demo/overview.c	/^            enum options {A,B,C};$/;"	e	enum:overview::options	file:
 A0	lib/klib/khmm.h	/^	FLOAT Q0, **A, **E, *A0;$/;"	m	struct:__anonf542711f0308	typeref:typename:FLOAT *****
+AApp	src/App.c	/^struct AApp AApp[1] = {{$/;"	v	typeref:struct:AApp[1]
+AApp	src/App.h	/^struct AApp {$/;"	s
 AC_KGRAPH_H	lib/klib/kgraph.h	/^#define AC_KGRAPH_H$/;"	d
 AC_KMATH_H	lib/klib/kmath.h	/^#define AC_KMATH_H$/;"	d
 AC_KSEQ_H	lib/klib/kseq.h	/^#define AC_KSEQ_H$/;"	d
@@ -73,6 +75,10 @@ AC_KSORT_H	lib/klib/ksort.h	/^#define AC_KSORT_H$/;"	d
 AC_KVEC_H	lib/klib/kvec.h	/^#define AC_KVEC_H$/;"	d
 AC_SCHMM_H_	lib/klib/khmm.h	/^#define AC_SCHMM_H_$/;"	d
 AC_VERSION_KHASH_H	lib/klib/khash.h	/^#define AC_VERSION_KHASH_H /;"	d
+ADrawable	src/Drawable.c	/^struct ADrawable ADrawable[1] = {{$/;"	v	typeref:struct:ADrawable[1]
+ADrawable	src/Drawable.h	/^struct ADrawable {$/;"	s
+AGui	src/Gui.c	/^struct AGui AGui[1] = {{$/;"	v	typeref:struct:AGui[1]
+AGui	src/Gui.h	/^struct AGui {$/;"	s
 API	lib/cimgui/cimgui/cimgui.h	/^#define API /;"	d
 API	lib/cimgui/cimgui/cimgui.h	/^#define API$/;"	d
 APIENTRY	lib/cimgui/imgui/examples/libs/gl3w/GL/glcorearb.h	/^#define APIENTRY$/;"	d
@@ -87,6 +93,12 @@ ARCHITECTURE_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#
 ARCHITECTURE_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID /;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define ARCHITECTURE_ID$/;"	d	file:
 ARGB	lib/nuklear/demo/gdip/nuklear_gdip.h	/^typedef DWORD ARGB;$/;"	t	typeref:typename:DWORD
+AScene	src/Scene.c	/^struct AScene AScene[1] = {{$/;"	v	typeref:struct:AScene[1]
+AScene	src/Scene.h	/^struct AScene {$/;"	s
+AShader	src/Shader.c	/^struct AShader AShader[1] = {{$/;"	v	typeref:struct:AShader[1]
+AShader	src/Shader.h	/^struct AShader {$/;"	s
+AShape	src/Shape.c	/^struct AShape AShape[1] = {{$/;"	v	typeref:struct:AShape[1]
+AShape	src/Shape.h	/^struct AShape {$/;"	s
 AcceptDragDropPayload	lib/cimgui/imgui/imgui.cpp	/^const ImGuiPayload* ImGui::AcceptDragDropPayload(const char* type, ImGuiDragDropFlags flags)$/;"	f	class:ImGui	typeref:typename:const ImGuiPayload *
 ActivateItem	lib/cimgui/imgui/imgui.cpp	/^void ImGui::ActivateItem(ImGuiID id)$/;"	f	class:ImGui	typeref:typename:void
 Active	lib/cimgui/imgui/imgui_internal.h	/^    bool                    Active;                             \/\/ Set to true on Begin(), unl/;"	m	struct:ImGuiWindow	typeref:typename:bool
@@ -127,6 +139,8 @@ AddInputCharactersUTF8	lib/cimgui/imgui/imgui.cpp	/^void ImGuiIO::AddInputCharac
 AddLine	lib/cimgui/imgui/imgui_draw.cpp	/^void ImDrawList::AddLine(const ImVec2& a, const ImVec2& b, ImU32 col, float thickness)$/;"	f	class:ImDrawList	typeref:typename:void
 AddLog	lib/cimgui/imgui/imgui_demo.cpp	/^    void    AddLog(const char* fmt, ...) IM_FMTARGS(2)$/;"	f	struct:ExampleAppConsole	typeref:typename:void	file:
 AddLog	lib/cimgui/imgui/imgui_demo.cpp	/^    void    AddLog(const char* fmt, ...) IM_FMTARGS(2)$/;"	f	struct:ExampleAppLog	typeref:typename:void	file:
+AddObject	src/Scene.c	/^AddObject(Scene* scene, Drawable* d) {$/;"	f	typeref:typename:void	file:
+AddObject	src/Scene.h	/^	void   (*AddObject)(Scene*, Drawable*);$/;"	m	struct:AScene	typeref:typename:void (*)(Scene *,Drawable *)
 AddPolyline	lib/cimgui/imgui/imgui_draw.cpp	/^void ImDrawList::AddPolyline(const ImVec2* points, const int points_count, ImU32 col, bool close/;"	f	class:ImDrawList	typeref:typename:void
 AddQuad	lib/cimgui/imgui/imgui_draw.cpp	/^void ImDrawList::AddQuad(const ImVec2& a, const ImVec2& b, const ImVec2& c, const ImVec2& d, ImU/;"	f	class:ImDrawList	typeref:typename:void
 AddQuadFilled	lib/cimgui/imgui/imgui_draw.cpp	/^void ImDrawList::AddQuadFilled(const ImVec2& a, const ImVec2& b, const ImVec2& c, const ImVec2& /;"	f	class:ImDrawList	typeref:typename:void
@@ -335,6 +349,7 @@ CHART_HISTO	lib/nuklear/demo/overview.c	/^                enum chart_type {CHART
 CHART_LINE	lib/nuklear/demo/overview.c	/^                enum chart_type {CHART_LINE, CHART_HISTO, CHART_MIXED};$/;"	e	enum:overview::chart_type	file:
 CHART_MIXED	lib/nuklear/demo/overview.c	/^                enum chart_type {CHART_LINE, CHART_HISTO, CHART_MIXED};$/;"	e	enum:overview::chart_type	file:
 CIMGUI_API	lib/cimgui/cimgui/cimgui.h	/^#define CIMGUI_API /;"	d
+CIMGUI_DEFINE_ENUMS_AND_STRUCTS	src/Gui.c	/^#define CIMGUI_DEFINE_ENUMS_AND_STRUCTS$/;"	d	file:
 CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/peko\/lab\/bbgl\/build$/;"	m
 CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
 CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/peko\/lab\/bbgl$/;"	m
@@ -483,6 +498,7 @@ CmdListsCount	lib/cimgui/imgui/imgui.h	/^    int             CmdListsCount;     
 Codepoint	lib/cimgui/imgui/imgui.h	/^    ImWchar         Codepoint;          \/\/ 0x0000..0xFFFF$/;"	m	struct:ImFontGlyph	typeref:typename:ImWchar
 Col	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiCol    Col;$/;"	m	struct:ImGuiColMod	typeref:typename:ImGuiCol
 CollapseToggleWanted	lib/cimgui/imgui/imgui_internal.h	/^    bool                    CollapseToggleWanted;$/;"	m	struct:ImGuiWindow	typeref:typename:bool
+Collapsed	bin/imgui.ini	/^Collapsed=0$/;"	k	section:Window
 Collapsed	lib/cimgui/imgui/imgui_internal.h	/^    bool                    Collapsed;                          \/\/ Set when collapsing window /;"	m	struct:ImGuiWindow	typeref:typename:bool
 Collapsed	lib/cimgui/imgui/imgui_internal.h	/^    bool        Collapsed;$/;"	m	struct:ImGuiWindowSettings	typeref:typename:bool
 CollapsedCond	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiCond               CollapsedCond;$/;"	m	struct:ImGuiNextWindowData	typeref:typename:ImGuiCond
@@ -541,6 +557,14 @@ Count	lib/cimgui/imgui/imgui.cpp	/^    ImU32           Count;$/;"	m	struct:ImGui
 Count	lib/cimgui/imgui/imgui_internal.h	/^    int                 Count;$/;"	m	struct:ImGuiColumnsSet	typeref:typename:int
 Count	lib/cimgui/imgui/imgui_internal.h	/^    int         Count;$/;"	m	struct:ImGuiMenuColumns	typeref:typename:int
 CountGrep	lib/cimgui/imgui/imgui.h	/^    int                 CountGrep;$/;"	m	struct:ImGuiTextFilter	typeref:typename:int
+Create	src/Drawable.c	/^Create() {$/;"	f	typeref:typename:Drawable *	file:
+Create	src/Drawable.h	/^	Drawable* (*Create)();$/;"	m	struct:ADrawable	typeref:typename:Drawable * (*)()
+Create	src/Scene.c	/^Create() {$/;"	f	typeref:typename:Scene *	file:
+Create	src/Scene.h	/^	Scene* (*Create   )();$/;"	m	struct:AScene	typeref:typename:Scene * (*)()
+Create	src/Shader.c	/^Create(char* name) {$/;"	f	typeref:typename:Shader *	file:
+Create	src/Shader.h	/^   Shader* (*Create )(char*);$/;"	m	struct:AShader	typeref:typename:Shader * (*)(char *)
+Create	src/Shape.c	/^Create() {$/;"	f	typeref:typename:Shape *	file:
+Create	src/Shape.h	/^	Shape* (*Create )();$/;"	m	struct:AShape	typeref:typename:Shape * (*)()
 CreateContext	lib/cimgui/imgui/imgui.cpp	/^ImGuiContext* ImGui::CreateContext(ImFontAtlas* shared_font_atlas)$/;"	f	class:ImGui	typeref:typename:ImGuiContext *
 CreateDeviceD3D	lib/cimgui/imgui/examples/directx10_example/main.cpp	/^HRESULT CreateDeviceD3D(HWND hWnd)$/;"	f	typeref:typename:HRESULT
 CreateDeviceD3D	lib/cimgui/imgui/examples/directx11_example/main.cpp	/^HRESULT CreateDeviceD3D(HWND hWnd)$/;"	f	typeref:typename:HRESULT
@@ -689,6 +713,8 @@ DrawData	lib/cimgui/imgui/imgui_internal.h	/^    ImDrawData              DrawDat
 DrawDataBuilder	lib/cimgui/imgui/imgui_internal.h	/^    ImDrawDataBuilder       DrawDataBuilder;$/;"	m	struct:ImGuiContext	typeref:typename:ImDrawDataBuilder
 DrawList	lib/cimgui/imgui/imgui_internal.h	/^    ImDrawList*             DrawList;$/;"	m	struct:ImGuiWindow	typeref:typename:ImDrawList *
 DrawListSharedData	lib/cimgui/imgui/imgui_internal.h	/^    ImDrawListSharedData    DrawListSharedData;$/;"	m	struct:ImGuiContext	typeref:typename:ImDrawListSharedData
+Drawable	src/Drawable.h	/^struct Drawable {$/;"	s
+Drawable	src/Drawable.h	/^typedef struct Drawable Drawable;$/;"	t	typeref:struct:Drawable
 DstFont	lib/cimgui/cimgui/cimgui.h	/^    struct ImFont *DstFont;$/;"	m	struct:ImFontConfig	typeref:struct:ImFont *
 DstFont	lib/cimgui/imgui/imgui.h	/^    ImFont*         DstFont;$/;"	m	struct:ImFontConfig	typeref:typename:ImFont *
 Dummy	lib/cimgui/imgui/imgui.cpp	/^void ImGui::Dummy(const ImVec2& size)$/;"	f	class:ImGui	typeref:typename:void
@@ -958,9 +984,11 @@ GLFW_DOUBLEBUFFER	lib/cimgui/imgui/examples/libs/glfw/include/GLFW/glfw3.h	/^#de
 GLFW_EXPOSE_NATIVE_WGL	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^#define GLFW_EXPOSE_NATIVE_WGL$/;"	d	file:
 GLFW_EXPOSE_NATIVE_WGL	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^#define GLFW_EXPOSE_NATIVE_WGL$/;"	d	file:
 GLFW_EXPOSE_NATIVE_WGL	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^#define GLFW_EXPOSE_NATIVE_WGL$/;"	d	file:
+GLFW_EXPOSE_NATIVE_WGL	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^#define GLFW_EXPOSE_NATIVE_WGL$/;"	d	file:
 GLFW_EXPOSE_NATIVE_WIN32	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^#define GLFW_EXPOSE_NATIVE_WIN32$/;"	d	file:
 GLFW_EXPOSE_NATIVE_WIN32	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^#define GLFW_EXPOSE_NATIVE_WIN32$/;"	d	file:
 GLFW_EXPOSE_NATIVE_WIN32	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^#define GLFW_EXPOSE_NATIVE_WIN32$/;"	d	file:
+GLFW_EXPOSE_NATIVE_WIN32	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^#define GLFW_EXPOSE_NATIVE_WIN32$/;"	d	file:
 GLFW_FALSE	lib/cimgui/imgui/examples/libs/glfw/include/GLFW/glfw3.h	/^#define GLFW_FALSE /;"	d
 GLFW_FLOATING	lib/cimgui/imgui/examples/libs/glfw/include/GLFW/glfw3.h	/^#define GLFW_FLOATING /;"	d
 GLFW_FOCUSED	lib/cimgui/imgui/examples/libs/glfw/include/GLFW/glfw3.h	/^#define GLFW_FOCUSED /;"	d
@@ -5546,14 +5574,23 @@ ImGui_ImplGlfwGL2_RenderDrawData	lib/cimgui/imgui/examples/opengl2_example/imgui
 ImGui_ImplGlfwGL2_SetClipboardText	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^static void ImGui_ImplGlfwGL2_SetClipboardText(void* user_data, const char* text)$/;"	f	typeref:typename:void	file:
 ImGui_ImplGlfwGL2_Shutdown	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^void ImGui_ImplGlfwGL2_Shutdown()$/;"	f	typeref:typename:void
 ImGui_ImplGlfwGL3_CreateDeviceObjects	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^bool ImGui_ImplGlfwGL3_CreateDeviceObjects()$/;"	f	typeref:typename:bool
+ImGui_ImplGlfwGL3_CreateDeviceObjects	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^bool ImGui_ImplGlfwGL3_CreateDeviceObjects()$/;"	f	typeref:typename:bool
 ImGui_ImplGlfwGL3_CreateFontsTexture	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^bool ImGui_ImplGlfwGL3_CreateFontsTexture()$/;"	f	typeref:typename:bool
+ImGui_ImplGlfwGL3_CreateFontsTexture	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^bool ImGui_ImplGlfwGL3_CreateFontsTexture()$/;"	f	typeref:typename:bool
 ImGui_ImplGlfwGL3_GetClipboardText	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static const char* ImGui_ImplGlfwGL3_GetClipboardText(void* user_data)$/;"	f	typeref:typename:const char *	file:
+ImGui_ImplGlfwGL3_GetClipboardText	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static const char* ImGui_ImplGlfwGL3_GetClipboardText(void* user_data)$/;"	f	typeref:typename:const char *	file:
 ImGui_ImplGlfwGL3_Init	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^bool    ImGui_ImplGlfwGL3_Init(GLFWwindow* window, bool install_callbacks, const char* glsl_vers/;"	f	typeref:typename:bool
+ImGui_ImplGlfwGL3_Init	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^bool    ImGui_ImplGlfwGL3_Init(GLFWwindow* window, bool install_callbacks, const char* glsl_vers/;"	f	typeref:typename:bool
 ImGui_ImplGlfwGL3_InvalidateDeviceObjects	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void    ImGui_ImplGlfwGL3_InvalidateDeviceObjects()$/;"	f	typeref:typename:void
+ImGui_ImplGlfwGL3_InvalidateDeviceObjects	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void    ImGui_ImplGlfwGL3_InvalidateDeviceObjects()$/;"	f	typeref:typename:void
 ImGui_ImplGlfwGL3_NewFrame	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfwGL3_NewFrame()$/;"	f	typeref:typename:void
+ImGui_ImplGlfwGL3_NewFrame	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfwGL3_NewFrame()$/;"	f	typeref:typename:void
 ImGui_ImplGlfwGL3_RenderDrawData	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfwGL3_RenderDrawData(ImDrawData* draw_data)$/;"	f	typeref:typename:void
+ImGui_ImplGlfwGL3_RenderDrawData	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfwGL3_RenderDrawData(ImDrawData* draw_data)$/;"	f	typeref:typename:void
 ImGui_ImplGlfwGL3_SetClipboardText	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static void ImGui_ImplGlfwGL3_SetClipboardText(void* user_data, const char* text)$/;"	f	typeref:typename:void	file:
+ImGui_ImplGlfwGL3_SetClipboardText	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static void ImGui_ImplGlfwGL3_SetClipboardText(void* user_data, const char* text)$/;"	f	typeref:typename:void	file:
 ImGui_ImplGlfwGL3_Shutdown	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfwGL3_Shutdown()$/;"	f	typeref:typename:void
+ImGui_ImplGlfwGL3_Shutdown	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfwGL3_Shutdown()$/;"	f	typeref:typename:void
 ImGui_ImplGlfwVulkan_CreateDeviceObjects	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^bool ImGui_ImplGlfwVulkan_CreateDeviceObjects()$/;"	f	typeref:typename:bool
 ImGui_ImplGlfwVulkan_CreateFontsTexture	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^bool ImGui_ImplGlfwVulkan_CreateFontsTexture(VkCommandBuffer command_buffer)$/;"	f	typeref:typename:bool
 ImGui_ImplGlfwVulkan_GetClipboardText	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static const char* ImGui_ImplGlfwVulkan_GetClipboardText(void* user_data)$/;"	f	typeref:typename:const char *	file:
@@ -5571,18 +5608,23 @@ ImGui_ImplGlfwVulkan_VkResult	lib/cimgui/imgui/examples/vulkan_example/imgui_imp
 ImGui_ImplGlfw_CharCallback	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^void ImGui_ImplGlfw_CharCallback(GLFWwindow*, unsigned int c)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_CharCallback	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_CharCallback(GLFWwindow*, unsigned int c)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_CharCallback	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^void ImGui_ImplGlfw_CharCallback(GLFWwindow*, unsigned int c)$/;"	f	typeref:typename:void
+ImGui_ImplGlfw_CharCallback	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_CharCallback(GLFWwindow*, unsigned int c)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_InstallCallbacks	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^static void ImGui_ImplGlfw_InstallCallbacks(GLFWwindow* window)$/;"	f	typeref:typename:void	file:
 ImGui_ImplGlfw_InstallCallbacks	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static void ImGui_ImplGlfw_InstallCallbacks(GLFWwindow* window)$/;"	f	typeref:typename:void	file:
 ImGui_ImplGlfw_InstallCallbacks	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static void ImGui_ImplGlfw_InstallCallbacks(GLFWwindow* window)$/;"	f	typeref:typename:void	file:
+ImGui_ImplGlfw_InstallCallbacks	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static void ImGui_ImplGlfw_InstallCallbacks(GLFWwindow* window)$/;"	f	typeref:typename:void	file:
 ImGui_ImplGlfw_KeyCallback	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^void ImGui_ImplGlfw_KeyCallback(GLFWwindow*, int key, int, int action, int mods)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_KeyCallback	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_KeyCallback(GLFWwindow*, int key, int, int action, int mods)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_KeyCallback	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^void ImGui_ImplGlfw_KeyCallback(GLFWwindow*, int key, int, int action, int mods)$/;"	f	typeref:typename:void
+ImGui_ImplGlfw_KeyCallback	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_KeyCallback(GLFWwindow*, int key, int, int action, int mods)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_MouseButtonCallback	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^void ImGui_ImplGlfw_MouseButtonCallback(GLFWwindow*, int button, int action, int \/*mods*\/)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_MouseButtonCallback	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_MouseButtonCallback(GLFWwindow*, int button, int action, int \/*mods*\/)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_MouseButtonCallback	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^void ImGui_ImplGlfw_MouseButtonCallback(GLFWwindow*, int button, int action, int \/*mods*\/)$/;"	f	typeref:typename:void
+ImGui_ImplGlfw_MouseButtonCallback	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_MouseButtonCallback(GLFWwindow*, int button, int action, int \/*mods*\/)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_ScrollCallback	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^void ImGui_ImplGlfw_ScrollCallback(GLFWwindow*, double xoffset, double yoffset)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_ScrollCallback	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_ScrollCallback(GLFWwindow*, double xoffset, double yoffset)$/;"	f	typeref:typename:void
 ImGui_ImplGlfw_ScrollCallback	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^void ImGui_ImplGlfw_ScrollCallback(GLFWwindow*, double xoffset, double yoffset)$/;"	f	typeref:typename:void
+ImGui_ImplGlfw_ScrollCallback	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^void ImGui_ImplGlfw_ScrollCallback(GLFWwindow*, double xoffset, double yoffset)$/;"	f	typeref:typename:void
 ImGui_ImplIOS_CreateDeviceObjects	lib/cimgui/imgui/examples/apple_example/imguiex-ios/imgui_impl_ios.mm	/^bool ImGui_ImplIOS_CreateDeviceObjects()$/;"	f
 ImGui_ImplIOS_CreateDeviceObjects	lib/cimgui/imgui/examples/apple_example/imguiex-ios/imgui_impl_ios.mm	/^bool ImGui_ImplIOS_CreateDeviceObjects();$/;"	f
 ImGui_ImplIOS_CreateFontsTexture	lib/cimgui/imgui/examples/apple_example/imguiex-ios/imgui_impl_ios.mm	/^void ImGui_ImplIOS_CreateFontsTexture()$/;"	f
@@ -5731,6 +5773,19 @@ IniFilename	lib/cimgui/imgui/imgui.h	/^    const char*   IniFilename;           
 IniSavingRate	lib/cimgui/cimgui/cimgui.h	/^    float IniSavingRate;$/;"	m	struct:ImGuiIO	typeref:typename:float
 IniSavingRate	lib/cimgui/imgui/imgui.h	/^    float         IniSavingRate;            \/\/ = 5.0f               \/\/ Maximum time between /;"	m	struct:ImGuiIO	typeref:typename:float
 Init	lib/cimgui/imgui/misc/freetype/imgui_freetype.cpp	/^    bool FreeTypeFont::Init(const ImFontConfig& cfg, unsigned int extra_user_flags)$/;"	f	class:__anon71f5b57f0110::FreeTypeFont	typeref:typename:bool
+Init	src/App.c	/^Init() {$/;"	f	typeref:typename:void	file:
+Init	src/App.h	/^	void (*Init)();$/;"	m	struct:AApp	typeref:typename:void (*)()
+Init	src/Drawable.c	/^Init(Drawable *outDrawable) {$/;"	f	typeref:typename:void	file:
+Init	src/Drawable.h	/^	void (*Init   )(Drawable* outDrawable);$/;"	m	struct:ADrawable	typeref:typename:void (*)(Drawable * outDrawable)
+Init	src/Gui.c	/^Init(GLFWwindow* win) {$/;"	f	typeref:typename:void	file:
+Init	src/Gui.h	/^	void (*Init   )();$/;"	m	struct:AGui	typeref:typename:void (*)()
+Init	src/Scene.c	/^Init(Scene* outScene){$/;"	f	typeref:typename:void	file:
+Init	src/Scene.h	/^	void   (*Init     )(Scene*);$/;"	m	struct:AScene	typeref:typename:void (*)(Scene *)
+Init	src/Shader.c	/^Init(Shader* outShader, char* name) {$/;"	f	typeref:typename:void	file:
+Init	src/Shader.h	/^   void    (*Init   )(Shader*, char*);$/;"	m	struct:AShader	typeref:typename:void (*)(Shader *,char *)
+Init	src/Shape.c	/^Init(Shape* outShape) {$/;"	f	typeref:typename:void	file:
+Init	src/Shape.h	/^	void   (*Init   )(Shape*);$/;"	m	struct:AShape	typeref:typename:void (*)(Shape *)
+InitPlane	src/Shape.c	/^InitPlane(Shape* outShape) {$/;"	f	typeref:typename:void	file:
 InitialText	lib/cimgui/imgui/imgui_internal.h	/^    ImVector<char>      InitialText;                \/\/ backup of end-user buffer at the time o/;"	m	struct:ImGuiTextEditState	typeref:typename:ImVector<char>
 Initialize	lib/cimgui/imgui/imgui.cpp	/^void ImGui::Initialize(ImGuiContext* context)$/;"	f	class:ImGui	typeref:typename:void
 Initialized	lib/cimgui/imgui/imgui_internal.h	/^    bool                    Initialized;$/;"	m	struct:ImGuiContext	typeref:typename:bool
@@ -6113,10 +6168,14 @@ LogText	lib/cimgui/imgui/imgui.cpp	/^void ImGui::LogText(const char* fmt, ...)$/
 LogToClipboard	lib/cimgui/imgui/imgui.cpp	/^void ImGui::LogToClipboard(int max_depth)$/;"	f	class:ImGui	typeref:typename:void
 LogToFile	lib/cimgui/imgui/imgui.cpp	/^void ImGui::LogToFile(int max_depth, const char* filename)$/;"	f	class:ImGui	typeref:typename:void
 LogToTTY	lib/cimgui/imgui/imgui.cpp	/^void ImGui::LogToTTY(int max_depth)$/;"	f	class:ImGui	typeref:typename:void
+Loop	src/App.c	/^Loop() {$/;"	f	typeref:typename:void	file:
+Loop	src/App.h	/^	void (*Loop)();$/;"	m	struct:AApp	typeref:typename:void (*)()
 LowerBound	lib/cimgui/imgui/imgui.cpp	/^static ImVector<ImGuiStorage::Pair>::iterator LowerBound(ImVector<ImGuiStorage::Pair>& data, ImG/;"	f	typeref:typename:ImVector<ImGuiStorage::Pair>::iterator	file:
 MALLOC	lib/klib/keigen.c	/^#define MALLOC(/;"	d	file:
 MAP_ANALOG	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^        #define MAP_ANALOG(/;"	d	file:
+MAP_ANALOG	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^        #define MAP_ANALOG(/;"	d	file:
 MAP_BUTTON	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^        #define MAP_BUTTON(/;"	d	file:
+MAP_BUTTON	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^        #define MAP_BUTTON(/;"	d	file:
 MAX	lib/nuklear/demo/allegro5/main.c	/^#define MAX(/;"	d	file:
 MAX	lib/nuklear/demo/sdl_opengles2/main.c	/^#define MAX(/;"	d	file:
 MAX	lib/nuklear/demo/x11_rawfb/main.c	/^#define MAX(/;"	d	file:
@@ -8787,7 +8846,7 @@ PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  de
 PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^#  define PLATFORM_ID$/;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID /;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.11.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^# define PLATFORM_ID$/;"	d	file:
-POINT_SIZE	src/obj.c	/^	#define POINT_SIZE /;"	d	file:
+POINT_SIZE	src/Shape.c	/^    #define POINT_SIZE /;"	d	file:
 PROGS	lib/klib/test/Makefile	/^PROGS=kbtree_test khash_keith khash_keith2 khash_test klist_test kseq_test kseq_bench \\$/;"	m
 PS	lib/cimgui/imgui/examples/directx10_example/imgui_impl_dx10.cpp	/^        ID3D10PixelShader*          PS;$/;"	m	struct:ImGui_ImplDX10_RenderDrawData::BACKUP_DX10_STATE	typeref:typename:ID3D10PixelShader *	file:
 PS	lib/cimgui/imgui/examples/directx11_example/imgui_impl_dx11.cpp	/^        ID3D11PixelShader*          PS;$/;"	m	struct:ImGui_ImplDX11_RenderDrawData::BACKUP_DX11_STATE	typeref:typename:ID3D11PixelShader *	file:
@@ -8846,6 +8905,9 @@ PopupId	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiID                 PopupId;
 PopupId	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiID             PopupId;        \/\/ Set on OpenPopup()$/;"	m	struct:ImGuiPopupRef	typeref:typename:ImGuiID
 PopupRounding	lib/cimgui/cimgui/cimgui.h	/^    float PopupRounding;$/;"	m	struct:ImGuiStyle	typeref:typename:float
 PopupRounding	lib/cimgui/imgui/imgui.h	/^    float       PopupRounding;              \/\/ Radius of popup window corners rounding. (Note /;"	m	struct:ImGuiStyle	typeref:typename:float
+Pos	bin/imgui.ini	/^Pos=0,0$/;"	k	section:Window
+Pos	bin/imgui.ini	/^Pos=510,23$/;"	k	section:Window
+Pos	bin/imgui.ini	/^Pos=60,60$/;"	k	section:Window
 Pos	lib/cimgui/cimgui/cimgui.h	/^    struct ImVec2 Pos;$/;"	m	struct:ImGuiSizeCallbackData	typeref:struct:ImVec2
 Pos	lib/cimgui/imgui/imgui.h	/^    ImVec2  Pos;            \/\/ Read-only.   Window position, for reference.$/;"	m	struct:ImGuiSizeCallbackData	typeref:typename:ImVec2
 Pos	lib/cimgui/imgui/imgui_internal.h	/^    ImVec2                  Pos;                                \/\/ Position rounded-up to near/;"	m	struct:ImGuiWindow	typeref:typename:ImVec2
@@ -8922,7 +8984,23 @@ RectRel	lib/cimgui/imgui/imgui_internal.h	/^    ImRect        RectRel;      \/\/
 Rects	lib/cimgui/imgui/imgui_draw.cpp	/^        stbrp_rect*         Rects;$/;"	m	struct:ImFontAtlasBuildWithStbTruetype::ImFontTempBuildData	typeref:typename:stbrp_rect *	file:
 RectsCount	lib/cimgui/imgui/imgui_draw.cpp	/^        int                 RectsCount;$/;"	m	struct:ImFontAtlasBuildWithStbTruetype::ImFontTempBuildData	typeref:typename:int	file:
 RefFrame	lib/cimgui/imgui/imgui.h	/^    mutable int RefFrame;$/;"	m	struct:ImGuiOnceUponAFrame	typeref:typename:int
+Release	src/Drawable.c	/^Release(Drawable* drawable) {$/;"	f	typeref:typename:void	file:
+Release	src/Drawable.h	/^	void (*Release)(Drawable* drawable);$/;"	m	struct:ADrawable	typeref:typename:void (*)(Drawable * drawable)
+Release	src/Gui.c	/^Release(){$/;"	f	typeref:typename:void	file:
+Release	src/Gui.h	/^	void (*Release)();$/;"	m	struct:AGui	typeref:typename:void (*)()
+Release	src/Scene.c	/^Release(Scene* scene) { $/;"	f	typeref:typename:void	file:
+Release	src/Scene.h	/^	void   (*Release  )(Scene*);$/;"	m	struct:AScene	typeref:typename:void (*)(Scene *)
+Release	src/Shader.c	/^Release(Shader* shader) {$/;"	f	typeref:typename:void	file:
+Release	src/Shader.h	/^   void    (*Release)(Shader*);$/;"	m	struct:AShader	typeref:typename:void (*)(Shader *)
+Release	src/Shape.c	/^Release(Shape* shape) {$/;"	f	typeref:typename:void	file:
+Release	src/Shape.h	/^	void   (*Release)(Shape*);$/;"	m	struct:AShape	typeref:typename:void (*)(Shape *)
 Render	lib/cimgui/imgui/imgui.cpp	/^void ImGui::Render()$/;"	f	class:ImGui	typeref:typename:void
+Render	src/Drawable.c	/^Render(Drawable* drawable) {$/;"	f	typeref:typename:void	file:
+Render	src/Drawable.h	/^	void (*Render )(Drawable* drawable);$/;"	m	struct:ADrawable	typeref:typename:void (*)(Drawable * drawable)
+Render	src/Gui.c	/^Render(){$/;"	f	typeref:typename:void	file:
+Render	src/Gui.h	/^	void (*Render )();$/;"	m	struct:AGui	typeref:typename:void (*)()
+Render	src/Scene.c	/^Render(Scene* scene) {$/;"	f	typeref:typename:void	file:
+Render	src/Scene.h	/^	void   (*Render   )(Scene*);$/;"	m	struct:AScene	typeref:typename:void (*)(Scene *)
 RenderArrow	lib/cimgui/imgui/imgui.cpp	/^static void RenderArrow(ImDrawList* draw_list, ImVec2 pos, ImVec2 half_sz, ImGuiDir direction, I/;"	f	typeref:typename:void	file:
 RenderArrow	lib/cimgui/imgui/imgui.cpp	/^void ImGui::RenderArrow(ImVec2 p_min, ImGuiDir dir, float scale)$/;"	f	class:ImGui	typeref:typename:void
 RenderArrowsForVerticalBar	lib/cimgui/imgui/imgui.cpp	/^static void RenderArrowsForVerticalBar(ImDrawList* draw_list, ImVec2 pos, ImVec2 half_sz, float /;"	f	typeref:typename:void	file:
@@ -8941,6 +9019,8 @@ RenderText	lib/cimgui/imgui/imgui_draw.cpp	/^void ImFont::RenderText(ImDrawList*
 RenderTextClipped	lib/cimgui/imgui/imgui.cpp	/^void ImGui::RenderTextClipped(const ImVec2& pos_min, const ImVec2& pos_max, const char* text, co/;"	f	class:ImGui	typeref:typename:void
 RenderTextWrapped	lib/cimgui/imgui/imgui.cpp	/^void ImGui::RenderTextWrapped(ImVec2 pos, const char* text, const char* text_end, float wrap_wid/;"	f	class:ImGui	typeref:typename:void
 ResetMouseDragDelta	lib/cimgui/imgui/imgui.cpp	/^void ImGui::ResetMouseDragDelta(int button)$/;"	f	class:ImGui	typeref:typename:void
+Resize	src/Scene.c	/^Resize(Scene* outScene, int width, int height) {$/;"	f	typeref:typename:void	file:
+Resize	src/Scene.h	/^	void   (*Resize   )(Scene*, int, int);$/;"	m	struct:AScene	typeref:typename:void (*)(Scene *,int,int)
 ResizeSwapChain	lib/cimgui/imgui/examples/directx12_example/main.cpp	/^void ResizeSwapChain(HWND hWnd, int width, int height)$/;"	f	typeref:typename:void
 Restore	lib/cimgui/imgui/imgui_internal.h	/^    void Restore() const { ImGuiWindow* window = GImGui->CurrentWindow; window->DC.LastItemId = /;"	f	struct:ImGuiItemHoveredDataBackup	typeref:typename:void
 RootWindow	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiWindow*            RootWindow;                         \/\/ Point to ourself or first a/;"	m	struct:ImGuiWindow	typeref:typename:ImGuiWindow *
@@ -9211,6 +9291,8 @@ ScalarAsInputTextId	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiID             
 Scale	lib/cimgui/imgui/imgui.h	/^    float                       Scale;              \/\/ = 1.f        \/\/ Base font scale, mult/;"	m	struct:ImFont	typeref:typename:float
 ScaleAllSizes	lib/cimgui/imgui/imgui.cpp	/^void ImGuiStyle::ScaleAllSizes(float scale_factor)$/;"	f	class:ImGuiStyle	typeref:typename:void
 ScaleClipRects	lib/cimgui/imgui/imgui_draw.cpp	/^void ImDrawData::ScaleClipRects(const ImVec2& scale)$/;"	f	class:ImDrawData	typeref:typename:void
+Scene	src/Scene.h	/^typedef struct Scene {$/;"	s
+Scene	src/Scene.h	/^} Scene;$/;"	t	typeref:struct:Scene
 ScissorRects	lib/cimgui/imgui/examples/directx10_example/imgui_impl_dx10.cpp	/^        D3D10_RECT                  ScissorRects[D3D10_VIEWPORT_AND_SCISSORRECT_OBJECT_COUNT_PER/;"	m	struct:ImGui_ImplDX10_RenderDrawData::BACKUP_DX10_STATE	typeref:typename:D3D10_RECT[]	file:
 ScissorRects	lib/cimgui/imgui/examples/directx11_example/imgui_impl_dx11.cpp	/^        D3D11_RECT                  ScissorRects[D3D11_VIEWPORT_AND_SCISSORRECT_OBJECT_COUNT_PER/;"	m	struct:ImGui_ImplDX11_RenderDrawData::BACKUP_DX11_STATE	typeref:typename:D3D11_RECT[]	file:
 ScissorRectsCount	lib/cimgui/imgui/examples/directx10_example/imgui_impl_dx10.cpp	/^        UINT                        ScissorRectsCount, ViewportsCount;$/;"	m	struct:ImGui_ImplDX10_RenderDrawData::BACKUP_DX10_STATE	typeref:typename:UINT	file:
@@ -9323,6 +9405,9 @@ SetupDrawData	lib/cimgui/imgui/imgui.cpp	/^static void SetupDrawData(ImVector<Im
 ShadeVertsLinearAlphaGradientForLeftToRightText	lib/cimgui/imgui/imgui_draw.cpp	/^void ImGui::ShadeVertsLinearAlphaGradientForLeftToRightText(ImDrawVert* vert_start, ImDrawVert* /;"	f	class:ImGui	typeref:typename:void
 ShadeVertsLinearColorGradientKeepAlpha	lib/cimgui/imgui/imgui_draw.cpp	/^void ImGui::ShadeVertsLinearColorGradientKeepAlpha(ImDrawVert* vert_start, ImDrawVert* vert_end,/;"	f	class:ImGui	typeref:typename:void
 ShadeVertsLinearUV	lib/cimgui/imgui/imgui_draw.cpp	/^void ImGui::ShadeVertsLinearUV(ImDrawVert* vert_start, ImDrawVert* vert_end, const ImVec2& a, co/;"	f	class:ImGui	typeref:typename:void
+Shader	src/Shader.h	/^} Shader;$/;"	t	typeref:struct:__anon74bd45490108
+Shape	src/Shape.h	/^struct Shape {$/;"	s
+Shape	src/Shape.h	/^typedef struct Shape Shape;$/;"	t	typeref:struct:Shape
 ShowDemoWindow	lib/cimgui/imgui/imgui_demo.cpp	/^void ImGui::ShowDemoWindow(bool* p_open)$/;"	f	class:ImGui	typeref:typename:void
 ShowDemoWindow	lib/cimgui/imgui/imgui_demo.cpp	/^void ImGui::ShowDemoWindow(bool*) {}$/;"	f	class:ImGui	typeref:typename:void
 ShowDummyObject	lib/cimgui/imgui/imgui_demo.cpp	/^        static void ShowDummyObject(const char* prefix, int uid)$/;"	f	struct:ShowExampleAppPropertyEditor::funcs	typeref:typename:void	file:
@@ -9350,6 +9435,11 @@ ShowUserGuide	lib/cimgui/imgui/imgui_demo.cpp	/^void ImGui::ShowUserGuide()$/;"	
 Shutdown	lib/cimgui/imgui/imgui.cpp	/^void ImGui::Shutdown(ImGuiContext* context)$/;"	f	class:ImGui	typeref:typename:void
 Shutdown	lib/cimgui/imgui/misc/freetype/imgui_freetype.cpp	/^    void FreeTypeFont::Shutdown()$/;"	f	class:__anon71f5b57f0110::FreeTypeFont	typeref:typename:void
 Sin	lib/cimgui/imgui/imgui_demo.cpp	/^                static float Sin(void*, int i) { return sinf(i * 0.1f); }$/;"	f	struct:ImGui::ShowDemoWindow::Funcs	typeref:typename:float	file:
+Size	bin/imgui.ini	/^Size=216,239$/;"	k	section:Window
+Size	bin/imgui.ini	/^Size=279,348$/;"	k	section:Window
+Size	bin/imgui.ini	/^Size=400,400$/;"	k	section:Window
+Size	bin/imgui.ini	/^Size=520,600$/;"	k	section:Window
+Size	bin/imgui.ini	/^Size=537,503$/;"	k	section:Window
 Size	lib/cimgui/imgui/imgui.h	/^    int                         Size;$/;"	m	class:ImVector	typeref:typename:int
 Size	lib/cimgui/imgui/imgui_internal.h	/^    ImVec2                  Size;                               \/\/ Current size (==SizeFull or/;"	m	struct:ImGuiWindow	typeref:typename:ImVec2
 Size	lib/cimgui/imgui/imgui_internal.h	/^    ImVec2      Size;$/;"	m	struct:ImGuiWindowSettings	typeref:typename:ImVec2
@@ -9398,6 +9488,8 @@ Spacing	lib/cimgui/imgui/imgui_internal.h	/^    float       Spacing;$/;"	m	struc
 SplitterBehavior	lib/cimgui/imgui/imgui.cpp	/^bool ImGui::SplitterBehavior(ImGuiID id, const ImRect& bb, ImGuiAxis axis, float* size1, float* /;"	f	class:ImGui	typeref:typename:bool
 Square	lib/cimgui/imgui/imgui_demo.cpp	/^        static void Square(ImGuiSizeCallbackData* data) { data->DesiredSize = ImVec2(IM_MAX(data/;"	f	struct:ShowExampleAppConstrainedResize::CustomConstraints	typeref:typename:void	file:
 StackSizesBackup	lib/cimgui/imgui/imgui_internal.h	/^    int                     StackSizesBackup[6];    \/\/ Store size of various stacks for assert/;"	m	struct:ImGuiDrawContext	typeref:typename:int[6]
+Start	src/Shader.c	/^Start(Shader* shader) {$/;"	f	typeref:typename:void	file:
+Start	src/Shader.h	/^   void    (*Start  )(Shader*);$/;"	m	struct:AShader	typeref:typename:void (*)(Shader *)
 StartMaxPosX	lib/cimgui/imgui/imgui_internal.h	/^    float               StartMaxPosX;       \/\/ Copy of CursorMaxPos$/;"	m	struct:ImGuiColumnsSet	typeref:typename:float
 StartPosY	lib/cimgui/cimgui/cimgui.h	/^    float StartPosY;$/;"	m	struct:ImGuiListClipper	typeref:typename:float
 StartPosY	lib/cimgui/imgui/imgui.h	/^    float   StartPosY;$/;"	m	struct:ImGuiListClipper	typeref:typename:float
@@ -9417,6 +9509,8 @@ Step	lib/cimgui/imgui/imgui.cpp	/^bool ImGuiListClipper::Step()$/;"	f	class:ImGu
 Step	lib/cimgui/imgui/imgui_demo.cpp	/^        static void Step(ImGuiSizeCallbackData* data)   { float step = (float)(int)(intptr_t)dat/;"	f	struct:ShowExampleAppConstrainedResize::CustomConstraints	typeref:typename:void	file:
 StepNo	lib/cimgui/cimgui/cimgui.h	/^    int ItemsCount, StepNo, DisplayStart, DisplayEnd;$/;"	m	struct:ImGuiListClipper	typeref:typename:int
 StepNo	lib/cimgui/imgui/imgui.h	/^    int     ItemsCount, StepNo, DisplayStart, DisplayEnd;$/;"	m	struct:ImGuiListClipper	typeref:typename:int
+Stop	src/Shader.c	/^Stop(Shader* shader) {$/;"	f	typeref:typename:void	file:
+Stop	src/Shader.h	/^   void    (*Stop   )(Shader*);$/;"	m	struct:AShader	typeref:typename:void (*)(Shader *)
 Strdup	lib/cimgui/imgui/imgui_demo.cpp	/^    static char* Strdup(const char *str)                             { size_t len = strlen(str) /;"	f	struct:ExampleAppConsole	typeref:typename:char *	file:
 Stricmp	lib/cimgui/imgui/imgui_demo.cpp	/^    static int   Stricmp(const char* str1, const char* str2)         { int d; while ((d = touppe/;"	f	struct:ExampleAppConsole	typeref:typename:int	file:
 Stride	lib/cimgui/imgui/imgui.cpp	/^    int Stride;$/;"	m	struct:ImGuiPlotArrayGetterData	typeref:typename:int	file:
@@ -9579,6 +9673,8 @@ UnitPixel	lib/nuklear/demo/gdip/nuklear_gdip.h	/^    UnitPixel,$/;"	e	enum:__ano
 UnitPoint	lib/nuklear/demo/gdip/nuklear_gdip.h	/^    UnitPoint,$/;"	e	enum:__anon66f154fe0803
 UnitWorld	lib/nuklear/demo/gdip/nuklear_gdip.h	/^    UnitWorld,$/;"	e	enum:__anon66f154fe0803
 Update	lib/cimgui/imgui/imgui.cpp	/^void ImGuiMenuColumns::Update(int count, float spacing, bool clear)$/;"	f	class:ImGuiMenuColumns	typeref:typename:void
+Update	src/Gui.c	/^Update(){$/;"	f	typeref:typename:void	file:
+Update	src/Gui.h	/^	void (*Update )();$/;"	m	struct:AGui	typeref:typename:void (*)()
 UpdateClipRect	lib/cimgui/imgui/imgui_draw.cpp	/^void ImDrawList::UpdateClipRect()$/;"	f	class:ImDrawList	typeref:typename:void
 UpdateManualResize	lib/cimgui/imgui/imgui.cpp	/^static void ImGui::UpdateManualResize(ImGuiWindow* window, const ImVec2& size_auto_fit, int* bor/;"	f	class:ImGui	typeref:typename:void	file:
 UpdateTextureID	lib/cimgui/imgui/imgui_draw.cpp	/^void ImDrawList::UpdateTextureID()$/;"	f	class:ImDrawList	typeref:typename:void
@@ -9669,7 +9765,7 @@ WINDOW_HEIGHT	lib/nuklear/example/canvas.c	/^#define WINDOW_HEIGHT /;"	d	file:
 WINDOW_HEIGHT	lib/nuklear/example/extended.c	/^#define WINDOW_HEIGHT /;"	d	file:
 WINDOW_HEIGHT	lib/nuklear/example/file_browser.c	/^#define WINDOW_HEIGHT /;"	d	file:
 WINDOW_HEIGHT	lib/nuklear/example/skinning.c	/^#define WINDOW_HEIGHT /;"	d	file:
-WINDOW_HEIGHT	src/bbgl.c	/^#define WINDOW_HEIGHT /;"	d	file:
+WINDOW_HEIGHT	src/App.c	/^#define WINDOW_HEIGHT /;"	d	file:
 WINDOW_WIDTH	lib/nuklear/demo/allegro5/main.c	/^#define WINDOW_WIDTH /;"	d	file:
 WINDOW_WIDTH	lib/nuklear/demo/d3d11/main.c	/^#define WINDOW_WIDTH /;"	d	file:
 WINDOW_WIDTH	lib/nuklear/demo/d3d9/main.c	/^#define WINDOW_WIDTH /;"	d	file:
@@ -9691,7 +9787,7 @@ WINDOW_WIDTH	lib/nuklear/example/canvas.c	/^#define WINDOW_WIDTH /;"	d	file:
 WINDOW_WIDTH	lib/nuklear/example/extended.c	/^#define WINDOW_WIDTH /;"	d	file:
 WINDOW_WIDTH	lib/nuklear/example/file_browser.c	/^#define WINDOW_WIDTH /;"	d	file:
 WINDOW_WIDTH	lib/nuklear/example/skinning.c	/^#define WINDOW_WIDTH /;"	d	file:
-WINDOW_WIDTH	src/bbgl.c	/^#define WINDOW_WIDTH /;"	d	file:
+WINDOW_WIDTH	src/App.c	/^#define WINDOW_WIDTH /;"	d	file:
 WINGDIAPI	lib/cimgui/imgui/examples/libs/glfw/include/GLFW/glfw3.h	/^ #define WINGDIAPI /;"	d
 WINGDIPAPI	lib/nuklear/demo/gdip/nuklear_gdip.h	/^#define WINGDIPAPI /;"	d
 WM_MOUSEHWHEEL	lib/cimgui/imgui/examples/directx10_example/imgui_impl_dx10.cpp	/^#define WM_MOUSEHWHEEL /;"	d	file:
@@ -9716,6 +9812,11 @@ Width	lib/cimgui/imgui/imgui.h	/^        unsigned short  Width, Height;  \/\/ In
 Width	lib/cimgui/imgui/imgui_internal.h	/^    float       Width, NextWidth;$/;"	m	struct:ImGuiMenuColumns	typeref:typename:float
 Width	lib/cimgui/imgui/misc/freetype/imgui_freetype.cpp	/^        float Width;		\/\/ Glyph's width in pixels.$/;"	m	struct:__anon71f5b57f0110::GlyphInfo	typeref:typename:float	file:
 Width	lib/nuklear/demo/gdip/nuklear_gdip.h	/^    FLOAT Width;$/;"	m	struct:__anon66f154fe0908	typeref:typename:FLOAT
+Window	bin/imgui.ini	/^[Window][Debug##Default]$/;"	s
+Window	bin/imgui.ini	/^[Window][Example: Console]$/;"	s
+Window	bin/imgui.ini	/^[Window][ImGui Demo]$/;"	s
+Window	bin/imgui.ini	/^[Window][Stream widget]$/;"	s
+Window	bin/imgui.ini	/^[Window][Test]$/;"	s
 Window	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiWindow*        Window;         \/\/ Resolved on BeginPopup() - may stay unresolved if u/;"	m	struct:ImGuiPopupRef	typeref:typename:ImGuiWindow *
 Window	lib/cimgui/imgui/imgui_internal.h	/^    ImGuiWindow*  Window;       \/\/ Best candidate window$/;"	m	struct:ImGuiNavMoveResult	typeref:typename:ImGuiWindow *
 WindowBorderSize	lib/cimgui/cimgui/cimgui.h	/^    float WindowBorderSize;$/;"	m	struct:ImGuiStyle	typeref:typename:float
@@ -9774,6 +9875,7 @@ _CRT_SECURE_NO_WARNINGS	lib/cimgui/imgui/imgui.cpp	/^#define _CRT_SECURE_NO_WARN
 _CRT_SECURE_NO_WARNINGS	lib/cimgui/imgui/imgui_demo.cpp	/^#define _CRT_SECURE_NO_WARNINGS$/;"	d	file:
 _CRT_SECURE_NO_WARNINGS	lib/cimgui/imgui/imgui_draw.cpp	/^#define _CRT_SECURE_NO_WARNINGS$/;"	d	file:
 _CRT_SECURE_NO_WARNINGS	lib/cimgui/imgui/misc/fonts/binary_to_compressed_c.cpp	/^#define _CRT_SECURE_NO_WARNINGS$/;"	d	file:
+_CRT_SECURE_NO_WARNINGS	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^#define _CRT_SECURE_NO_WARNINGS$/;"	d	file:
 _Channels	lib/cimgui/imgui/imgui.h	/^    ImVector<ImDrawChannel> _Channels;          \/\/ [Internal] draw channels for columns API (n/;"	m	struct:ImDrawList	typeref:typename:ImVector<ImDrawChannel>
 _ChannelsCount	lib/cimgui/imgui/imgui.h	/^    int                     _ChannelsCount;     \/\/ [Internal] number of active channels (1+)$/;"	m	struct:ImDrawList	typeref:typename:int
 _ChannelsCurrent	lib/cimgui/imgui/imgui.h	/^    int                     _ChannelsCurrent;   \/\/ [Internal] current channel number (0)$/;"	m	struct:ImDrawList	typeref:typename:int
@@ -9874,6 +9976,7 @@ __anon66f154fe0c08	lib/nuklear/demo/gdip/nuklear_gdip.h	/^typedef struct {$/;"	s
 __anon66f154fe0d08	lib/nuklear/demo/gdip/nuklear_gdip.h	/^static struct {$/;"	s
 __anon70d184300108	lib/nuklear/demo/d3d11/nuklear_d3d11.h	/^{$/;"	s
 __anon71f5b57f0110	lib/cimgui/imgui/misc/freetype/imgui_freetype.cpp	/^{$/;"	n	file:
+__anon74bd45490108	src/Shader.h	/^typedef struct {$/;"	s
 __anon77dd0a3a0108	lib/cimgui/imgui/examples/libs/usynergy/uSynergy.h	/^typedef struct { int ignored; } *					uSynergyCookie;$/;"	s
 __anon77dd0a3a0208	lib/cimgui/imgui/examples/libs/usynergy/uSynergy.h	/^{$/;"	s
 __anon7bd1e0a20108	lib/klib/ksw.c	/^typedef struct {$/;"	s	file:
@@ -9992,7 +10095,6 @@ __anonf630694b020a	lib/klib/kurl.c	/^	union { uint8_t b[BLOCK_LENGTH]; uint32_t 
 __anonf630694b030a	lib/klib/kurl.c	/^	union { uint8_t b[HASH_LENGTH]; uint32_t w[HASH_LENGTH\/4]; } state;$/;"	u	struct:sha1nfo	file:
 __anonf630694b0408	lib/klib/kurl.c	/^typedef struct { int l, m; char *s; } kstring_t;$/;"	s	file:
 __anonf63069500108	lib/klib/kurl.h	/^typedef struct {$/;"	s
-__anonfcf7e1690108	src/shader.h	/^typedef struct {$/;"	s
 __anonfd61af4b0108	lib/cimgui/imgui/stb_textedit.h	/^{$/;"	s
 __anonfd61af4b0208	lib/cimgui/imgui/stb_textedit.h	/^{$/;"	s
 __anonfd61af4b0308	lib/cimgui/imgui/stb_textedit.h	/^{$/;"	s
@@ -10128,6 +10230,8 @@ allocated	lib/nuklear/src/nuklear.h	/^    nk_size allocated;$/;"	m	struct:nk_buf
 allocated	lib/nuklear/src/nuklear.h	/^    nk_size allocated;$/;"	m	struct:nk_memory_status	typeref:typename:nk_size
 allocator	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.h	/^    VkAllocationCallbacks* allocator;$/;"	m	struct:ImGui_ImplGlfwVulkan_Init_Data	typeref:typename:VkAllocationCallbacks *
 alphabet	lib/klib/test/kstring_bench2.c	/^static int alphabet = 2;$/;"	v	typeref:typename:int	file:
+app	build/Makefile	/^app: cmake_check_build_system$/;"	t
+app/fast	build/Makefile	/^app\/fast:$/;"	t
 appendf	lib/cimgui/imgui/imgui.cpp	/^void ImGuiTextBuffer::appendf(const char* fmt, ...)$/;"	f	class:ImGuiTextBuffer	typeref:typename:void
 appendfv	lib/cimgui/imgui/imgui.cpp	/^void ImGuiTextBuffer::appendfv(const char* fmt, va_list args)$/;"	f	class:ImGuiTextBuffer	typeref:typename:void
 application:didFinishLaunchingWithOptions:	lib/cimgui/imgui/examples/apple_example/imguiex-ios/AppDelegate.m	/^- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)l/;"	m	implementation:AppDelegate
@@ -10251,10 +10355,6 @@ baseline_y_delta	lib/cimgui/imgui/stb_textedit.h	/^   float baseline_y_delta;  \
 baseline_y_delta	lib/nuklear/nuklear.h	/^   float baseline_y_delta;$/;"	m	struct:nk_text_edit_row	typeref:typename:float
 baseline_y_delta	lib/nuklear/src/nuklear_text_editor.c	/^   float baseline_y_delta;$/;"	m	struct:nk_text_edit_row	typeref:typename:float	file:
 basic_demo	lib/nuklear/example/extended.c	/^basic_demo(struct nk_context *ctx, struct media *media)$/;"	f	typeref:typename:void	file:
-bbgl	build/Makefile	/^bbgl: cmake_check_build_system$/;"	t
-bbgl/fast	build/Makefile	/^bbgl\/fast:$/;"	t
-bbgl_init	src/bbgl.c	/^void bbgl_init() {$/;"	f	typeref:typename:void
-bbgl_loop	src/bbgl.c	/^void bbgl_loop() {$/;"	f	typeref:typename:void
 begin	lib/cimgui/imgui/imgui.h	/^        const char* begin() const { return b; }$/;"	f	struct:ImGuiTextFilter::TextRange	typeref:typename:const char *
 begin	lib/cimgui/imgui/imgui.h	/^    const char*         begin() const { return &Buf.front(); }$/;"	f	struct:ImGuiTextBuffer	typeref:typename:const char *
 begin	lib/cimgui/imgui/imgui.h	/^    inline const_iterator       begin() const                   { return Data; }$/;"	f	class:ImVector	typeref:typename:const_iterator
@@ -10459,7 +10559,7 @@ check	lib/klib/test/kstring_test.c	/^void check(const char *what, const kstring_
 check	lib/nuklear/example/skinning.c	/^    struct nk_image check;$/;"	m	struct:media	typeref:struct:nk_image	file:
 check_cursor	lib/nuklear/example/skinning.c	/^    struct nk_image check_cursor;$/;"	m	struct:media	typeref:struct:nk_image	file:
 check_header	lib/klib/bgzf.c	/^static int check_header(const uint8_t *header)$/;"	f	typeref:typename:int	file:
-check_shader	src/shader.c	/^check_shader(GLuint sid) {$/;"	f	typeref:typename:void	file:
+check_shader	src/Shader.c	/^check_shader(GLuint sid) {$/;"	f	typeref:typename:void	file:
 check_vk_result	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.h	/^    void (*check_vk_result)(VkResult err);$/;"	m	struct:ImGui_ImplGlfwVulkan_Init_Data	typeref:typename:void (*)(VkResult err)
 check_vk_result	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static void check_vk_result(VkResult err)$/;"	f	typeref:typename:void	file:
 checkbox	lib/nuklear/nuklear.h	/^    struct nk_style_toggle checkbox;$/;"	m	struct:nk_style	typeref:struct:nk_style_toggle
@@ -10581,7 +10681,7 @@ col	lib/nuklear/example/file_browser.c	/^    nk_byte col[4];$/;"	m	struct:nk_glf
 col	lib/nuklear/example/skinning.c	/^    nk_byte col[4];$/;"	m	struct:nk_glfw_vertex	typeref:typename:nk_byte[4]	file:
 col	lib/nuklear/nuklear.h	/^    struct nk_color col;$/;"	m	struct:nk_command_image	typeref:struct:nk_color
 col	lib/nuklear/src/nuklear.h	/^    struct nk_color col;$/;"	m	struct:nk_command_image	typeref:struct:nk_color
-col	src/shader.h	/^	GLuint col;$/;"	m	struct:__anonfcf7e1690108	typeref:typename:GLuint
+col	src/Shader.h	/^    GLuint col;$/;"	m	struct:__anon74bd45490108	typeref:typename:GLuint
 color	lib/nuklear/demo/node_editor.c	/^    struct nk_color color;$/;"	m	struct:node	typeref:struct:nk_color	file:
 color	lib/nuklear/nuklear.h	/^    struct nk_color color;$/;"	m	struct:nk_chart_slot	typeref:struct:nk_color
 color	lib/nuklear/nuklear.h	/^    struct nk_color color;$/;"	m	struct:nk_command_arc	typeref:struct:nk_color
@@ -10709,6 +10809,7 @@ ctx	lib/nuklear/demo/x11_rawfb/nuklear_rawfb.h	/^    struct nk_context ctx;$/;"	
 ctx	lib/nuklear/demo/x11_rawfb/nuklear_xlib.h	/^    struct nk_context ctx;$/;"	m	struct:__anon88f201100108	typeref:struct:nk_context
 ctx	lib/nuklear/nuklear.h	/^    struct nk_context *ctx;$/;"	m	struct:nk_list_view	typeref:struct:nk_context *
 ctx	lib/nuklear/src/nuklear.h	/^    struct nk_context *ctx;$/;"	m	struct:nk_list_view	typeref:struct:nk_context *
+ctx	src/Gui.c	/^struct ImGuiContext* ctx;$/;"	v	typeref:struct:ImGuiContext *
 cubeColor1	lib/cimgui/imgui/examples/apple_example/imguiex-ios/debug_hud.h	/^    float cubeColor1[4];$/;"	m	struct:DebugHUD	typeref:typename:float[4]
 cubeColor2	lib/cimgui/imgui/examples/apple_example/imguiex-ios/debug_hud.h	/^    float cubeColor2[4];$/;"	m	struct:DebugHUD	typeref:typename:float[4]
 curFontCollection	lib/nuklear/demo/gdip/nuklear_gdip.h	/^    INT curFontCollection;$/;"	m	struct:__anon66f154fe0d08	typeref:typename:INT
@@ -10993,6 +11094,7 @@ draw_end	lib/nuklear/src/nuklear.h	/^    void(*draw_end)(struct nk_command_buffe
 draw_list	lib/nuklear/nuklear.h	/^    struct nk_draw_list draw_list;$/;"	m	struct:nk_context	typeref:struct:nk_draw_list
 draw_list	lib/nuklear/src/nuklear.h	/^    struct nk_draw_list draw_list;$/;"	m	struct:nk_context	typeref:struct:nk_draw_list
 drawable	lib/nuklear/demo/x11/nuklear_xlib.h	/^    Drawable drawable;$/;"	m	struct:XSurface	typeref:typename:Drawable
+drawable	src/Shape.h	/^    Drawable drawable[1];$/;"	m	struct:Shape	typeref:typename:Drawable[1]
 dret	lib/klib/test/kseq_bench2.c	/^		int fd, dret;$/;"	v	typeref:typename:int
 dsp	lib/nuklear/demo/allegro5/nuklear_allegro5.h	/^    ALLEGRO_DISPLAY *dsp;$/;"	m	struct:nk_allegro5	typeref:typename:ALLEGRO_DISPLAY *
 dx	lib/cimgui/imgui/stb_truetype.h	/^   int x,dx;$/;"	m	struct:stbtt__active_edge	typeref:typename:int
@@ -11067,7 +11169,7 @@ error_callback	lib/nuklear/example/canvas.c	/^static void error_callback(int e, 
 error_callback	lib/nuklear/example/extended.c	/^static void error_callback(int e, const char *d){printf("Error %d: %s\\n", e, d);}$/;"	f	typeref:typename:void	file:
 error_callback	lib/nuklear/example/file_browser.c	/^static void error_callback(int e, const char *d){printf("Error %d: %s\\n", e, d);}$/;"	f	typeref:typename:void	file:
 error_callback	lib/nuklear/example/skinning.c	/^static void error_callback(int e, const char *d){printf("Error %d: %s\\n", e, d);}$/;"	f	typeref:typename:void	file:
-error_callback	src/bbgl.c	/^static void error_callback(int e, const char *d)$/;"	f	typeref:typename:void	file:
+error_callback	src/App.c	/^static void error_callback(int e, const char *d)$/;"	f	typeref:typename:void	file:
 event_source	lib/nuklear/demo/allegro5/KeyboardHandleriOS.m	/^    ALLEGRO_EVENT_SOURCE *event_source;$/;"	E	interface:KeyboardHandleriOS
 expanded	lib/nuklear/example/stb_image.h	/^   stbi_uc *idata, *expanded, *out;$/;"	m	struct:__anonc731c3c80c08	typeref:typename:stbi_uc **
 extended	lib/nuklear/example/Makefile	/^extended: generate$/;"	t
@@ -11276,14 +11378,19 @@ g_Allocator	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	
 g_Allocator	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkAllocationCallbacks*   g_Allocator = NULL;$/;"	v	typeref:typename:VkAllocationCallbacks *	file:
 g_AttribLocationColor	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
 g_AttribLocationColor	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
+g_AttribLocationColor	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
 g_AttribLocationPosition	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
 g_AttribLocationPosition	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
+g_AttribLocationPosition	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
 g_AttribLocationProjMtx	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationTex = 0, g_AttribLocationProjMtx = 0;$/;"	v	typeref:typename:int	file:
 g_AttribLocationProjMtx	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_AttribLocationTex = 0, g_AttribLocationProjMtx = 0;$/;"	v	typeref:typename:int	file:
+g_AttribLocationProjMtx	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationTex = 0, g_AttribLocationProjMtx = 0;$/;"	v	typeref:typename:int	file:
 g_AttribLocationTex	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationTex = 0, g_AttribLocationProjMtx = 0;$/;"	v	typeref:typename:int	file:
 g_AttribLocationTex	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_AttribLocationTex = 0, g_AttribLocationProjMtx = 0;$/;"	v	typeref:typename:int	file:
+g_AttribLocationTex	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationTex = 0, g_AttribLocationProjMtx = 0;$/;"	v	typeref:typename:int	file:
 g_AttribLocationUV	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
 g_AttribLocationUV	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
+g_AttribLocationUV	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_AttribLocationPosition = 0, g_AttribLocationUV = 0, g_AttribLocationColor /;"	v	typeref:typename:int	file:
 g_BackBuffer	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkImage                  g_BackBuffer[IMGUI_MAX_POSSIBLE_BACK_BUFFERS] = {};$/;"	v	typeref:typename:VkImage[]	file:
 g_BackBufferCount	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static uint32_t                 g_BackBufferCount = 0;$/;"	v	typeref:typename:uint32_t	file:
 g_BackBufferView	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkImageView              g_BackBufferView[IMGUI_MAX_POSSIBLE_BACK_BUFFERS] = {};$/;"	v	typeref:typename:VkImageView[]	file:
@@ -11305,6 +11412,7 @@ g_Device	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkDevice    
 g_Display	lib/cimgui/imgui/examples/allegro5_example/imgui_impl_a5.cpp	/^static ALLEGRO_DISPLAY*         g_Display = NULL;$/;"	v	typeref:typename:ALLEGRO_DISPLAY *	file:
 g_ElementsHandle	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static unsigned int g_VboHandle = 0, g_ElementsHandle = 0;$/;"	v	typeref:typename:unsigned int	file:
 g_ElementsHandle	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static unsigned int g_VboHandle = 0,g_ElementsHandle = 0;$/;"	v	typeref:typename:unsigned int	file:
+g_ElementsHandle	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static unsigned int g_VboHandle = 0, g_ElementsHandle = 0;$/;"	v	typeref:typename:unsigned int	file:
 g_Fence	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkFence                  g_Fence[IMGUI_VK_QUEUED_FRAMES];$/;"	v	typeref:typename:VkFence[]	file:
 g_FontImage	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkImage                g_FontImage = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkImage	file:
 g_FontMemory	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkDeviceMemory         g_FontMemory = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkDeviceMemory	file:
@@ -11315,14 +11423,17 @@ g_FontTexture	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	
 g_FontTexture	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static GLuint       g_FontTexture = 0;$/;"	v	typeref:typename:GLuint	file:
 g_FontTexture	lib/cimgui/imgui/examples/sdl_opengl2_example/imgui_impl_sdl_gl2.cpp	/^static GLuint       g_FontTexture = 0;$/;"	v	typeref:typename:GLuint	file:
 g_FontTexture	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static GLuint       g_FontTexture = 0;$/;"	v	typeref:typename:GLuint	file:
+g_FontTexture	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static GLuint       g_FontTexture = 0;$/;"	v	typeref:typename:GLuint	file:
 g_FontView	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkImageView            g_FontView = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkImageView	file:
 g_FragHandle	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
 g_FragHandle	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
+g_FragHandle	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
 g_FrameIndex	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static int                    g_FrameIndex = 0;$/;"	v	typeref:typename:int	file:
 g_FrameIndex	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static uint32_t                 g_FrameIndex = 0;$/;"	v	typeref:typename:uint32_t	file:
 g_Framebuffer	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkFramebuffer            g_Framebuffer[IMGUI_MAX_POSSIBLE_BACK_BUFFERS] = {};$/;"	v	typeref:typename:VkFramebuffer[]	file:
 g_GlslVersion	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static char         g_GlslVersion[32] = "#version 150";$/;"	v	typeref:typename:char[32]	file:
 g_GlslVersion	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static char         g_GlslVersion[32] = "#version 150";$/;"	v	typeref:typename:char[32]	file:
+g_GlslVersion	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static char         g_GlslVersion[32] = "#version 150";$/;"	v	typeref:typename:char[32]	file:
 g_Gpu	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkPhysicalDevice       g_Gpu = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkPhysicalDevice	file:
 g_Gpu	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkPhysicalDevice         g_Gpu = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkPhysicalDevice	file:
 g_ImageRange	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkImageSubresourceRange  g_ImageRange = {VK_IMAGE_ASPECT_COLOR_BIT, 0, 1, 0, 1};$/;"	v	typeref:typename:VkImageSubresourceRange	file:
@@ -11343,9 +11454,11 @@ g_MouseCursors	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp
 g_MouseCursors	lib/cimgui/imgui/examples/sdl_opengl2_example/imgui_impl_sdl_gl2.cpp	/^static SDL_Cursor*  g_MouseCursors[ImGuiMouseCursor_COUNT] = { 0 };$/;"	v	typeref:typename:SDL_Cursor * []	file:
 g_MouseCursors	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static SDL_Cursor*  g_MouseCursors[ImGuiMouseCursor_COUNT] = { 0 };$/;"	v	typeref:typename:SDL_Cursor * []	file:
 g_MouseCursors	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static GLFWcursor*  g_MouseCursors[ImGuiMouseCursor_COUNT] = { 0 };$/;"	v	typeref:typename:GLFWcursor * []	file:
+g_MouseCursors	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static GLFWcursor*  g_MouseCursors[ImGuiMouseCursor_COUNT] = { 0 };$/;"	v	typeref:typename:GLFWcursor * []	file:
 g_MouseJustPressed	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^static bool         g_MouseJustPressed[3] = { false, false, false };$/;"	v	typeref:typename:bool[3]	file:
 g_MouseJustPressed	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static bool         g_MouseJustPressed[3] = { false, false, false };$/;"	v	typeref:typename:bool[3]	file:
 g_MouseJustPressed	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static bool         g_MouseJustPressed[3] = { false, false, false };$/;"	v	typeref:typename:bool[3]	file:
+g_MouseJustPressed	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static bool         g_MouseJustPressed[3] = { false, false, false };$/;"	v	typeref:typename:bool[3]	file:
 g_MousePressed	lib/cimgui/imgui/examples/marmalade_example/imgui_impl_marmalade.cpp	/^static bool         g_MousePressed[3] = { false, false, false };$/;"	v	typeref:typename:bool[3]	file:
 g_MousePressed	lib/cimgui/imgui/examples/sdl_opengl2_example/imgui_impl_sdl_gl2.cpp	/^static bool         g_MousePressed[3] = { false, false, false };$/;"	v	typeref:typename:bool[3]	file:
 g_MousePressed	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static bool         g_MousePressed[3] = { false, false, false };$/;"	v	typeref:typename:bool[3]	file:
@@ -11368,6 +11481,7 @@ g_ResizeWanted	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static bool  
 g_ResizeWidth	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static int                      g_ResizeWidth = 0, g_ResizeHeight = 0;$/;"	v	typeref:typename:int	file:
 g_ShaderHandle	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
 g_ShaderHandle	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
+g_ShaderHandle	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
 g_Surface	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkSurfaceKHR             g_Surface = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkSurfaceKHR	file:
 g_SurfaceFormat	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkSurfaceFormatKHR       g_SurfaceFormat;$/;"	v	typeref:typename:VkSurfaceFormatKHR	file:
 g_Swapchain	lib/cimgui/imgui/examples/vulkan_example/main.cpp	/^static VkSwapchainKHR           g_Swapchain = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkSwapchainKHR	file:
@@ -11387,12 +11501,15 @@ g_Time	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^stati
 g_Time	lib/cimgui/imgui/examples/sdl_opengl2_example/imgui_impl_sdl_gl2.cpp	/^static Uint64       g_Time = 0;$/;"	v	typeref:typename:Uint64	file:
 g_Time	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static Uint64       g_Time = 0;$/;"	v	typeref:typename:Uint64	file:
 g_Time	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static double       g_Time = 0.0f;$/;"	v	typeref:typename:double	file:
+g_Time	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static double       g_Time = 0.0;$/;"	v	typeref:typename:double	file:
 g_UploadBuffer	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkBuffer               g_UploadBuffer = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkBuffer	file:
 g_UploadBufferMemory	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkDeviceMemory         g_UploadBufferMemory = VK_NULL_HANDLE;$/;"	v	typeref:typename:VkDeviceMemory	file:
 g_VboHandle	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static unsigned int g_VboHandle = 0, g_ElementsHandle = 0;$/;"	v	typeref:typename:unsigned int	file:
 g_VboHandle	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static unsigned int g_VboHandle = 0,g_ElementsHandle = 0;$/;"	v	typeref:typename:unsigned int	file:
+g_VboHandle	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static unsigned int g_VboHandle = 0, g_ElementsHandle = 0;$/;"	v	typeref:typename:unsigned int	file:
 g_VertHandle	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
 g_VertHandle	lib/cimgui/imgui/examples/sdl_opengl3_example/imgui_impl_sdl_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
+g_VertHandle	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static int          g_ShaderHandle = 0, g_VertHandle = 0, g_FragHandle = 0;$/;"	v	typeref:typename:int	file:
 g_VertexBuffer	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkBuffer               g_VertexBuffer[IMGUI_VK_QUEUED_FRAMES] = {};$/;"	v	typeref:typename:VkBuffer[]	file:
 g_VertexBufferMemory	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static VkDeviceMemory         g_VertexBufferMemory[IMGUI_VK_QUEUED_FRAMES] = {};$/;"	v	typeref:typename:VkDeviceMemory[]	file:
 g_VertexBufferSize	lib/cimgui/imgui/examples/directx10_example/imgui_impl_dx10.cpp	/^static int                      g_VertexBufferSize = 5000, g_IndexBufferSize = 10000;$/;"	v	typeref:typename:int	file:
@@ -11403,6 +11520,7 @@ g_VertexDecl	lib/cimgui/imgui/examples/allegro5_example/imgui_impl_a5.cpp	/^stat
 g_Window	lib/cimgui/imgui/examples/opengl2_example/imgui_impl_glfw_gl2.cpp	/^static GLFWwindow*  g_Window = NULL;$/;"	v	typeref:typename:GLFWwindow *	file:
 g_Window	lib/cimgui/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp	/^static GLFWwindow*  g_Window = NULL;$/;"	v	typeref:typename:GLFWwindow *	file:
 g_Window	lib/cimgui/imgui/examples/vulkan_example/imgui_impl_glfw_vulkan.cpp	/^static GLFWwindow*  g_Window = NULL;$/;"	v	typeref:typename:GLFWwindow *	file:
+g_Window	lib/imgui_gl3/imgui_impl_glfw_gl3.cpp	/^static GLFWwindow*  g_Window = NULL;$/;"	v	typeref:typename:GLFWwindow *	file:
 g_d3dpp	lib/cimgui/imgui/examples/directx9_example/main.cpp	/^static D3DPRESENT_PARAMETERS    g_d3dpp;$/;"	v	typeref:typename:D3DPRESENT_PARAMETERS	file:
 g_defr	lib/klib/ksw.c	/^const kswr_t g_defr = { 0, -1, -1, -1, -1, -1, -1 };$/;"	v	typeref:typename:const kswr_t
 g_fence	lib/cimgui/imgui/examples/directx12_example/main.cpp	/^static ID3D12Fence*                 g_fence = NULL;$/;"	v	typeref:typename:ID3D12Fence *	file:
@@ -14001,10 +14119,6 @@ group_padding	lib/nuklear/src/nuklear.h	/^    struct nk_vec2 group_padding;$/;"	
 grow_factor	lib/nuklear/nuklear.h	/^    float grow_factor;$/;"	m	struct:nk_buffer	typeref:typename:float
 grow_factor	lib/nuklear/src/nuklear.h	/^    float grow_factor;$/;"	m	struct:nk_buffer	typeref:typename:float
 gsubrs	lib/cimgui/imgui/stb_truetype.h	/^   stbtt__buf gsubrs;                 \/\/ global charstring subroutines index$/;"	m	struct:stbtt_fontinfo	typeref:typename:stbtt__buf
-gui_init	src/gui.c	/^void gui_init(GLFWwindow* win) {$/;"	f	typeref:typename:void
-gui_render	src/gui.c	/^void gui_render(){}$/;"	f	typeref:typename:void
-gui_terminate	src/gui.c	/^void gui_terminate(){};$/;"	f	typeref:typename:void
-gui_update	src/gui.c	/^void gui_update(){}$/;"	f	typeref:typename:void
 h	lib/cimgui/imgui/stb_rect_pack.h	/^   stbrp_coord    w, h;$/;"	m	struct:stbrp_rect	typeref:typename:stbrp_coord
 h	lib/cimgui/imgui/stb_truetype.h	/^   int id,w,h,was_packed;$/;"	m	struct:stbrp_rect	typeref:typename:int
 h	lib/cimgui/imgui/stb_truetype.h	/^   int w,h,stride;$/;"	m	struct:__anonc4c159420808	typeref:typename:int
@@ -14161,7 +14275,7 @@ height	lib/nuklear/src/nuklear.h	/^    float width, height;$/;"	m	struct:nk_user
 height	lib/nuklear/src/nuklear_font.c	/^    int   height;$/;"	m	struct:nk_tt_pack_context	typeref:typename:int	file:
 height	lib/nuklear/src/nuklear_font.c	/^    int height;$/;"	m	struct:nk_rp_context	typeref:typename:int	file:
 height	lib/nuklear/src/nuklear_text_editor.c	/^   float height; \/* height of line *\/$/;"	m	struct:nk_text_find	typeref:typename:float	file:
-height	src/bbgl.c	/^int width = 0, height = 0;$/;"	v	typeref:typename:int
+height	src/App.c	/^int width = 0, height = 0;$/;"	v	typeref:typename:int
 help	build/Makefile	/^help:$/;"	t
 heuristic	lib/cimgui/imgui/stb_rect_pack.h	/^   int heuristic;$/;"	m	struct:stbrp_context	typeref:typename:int
 heuristic	lib/nuklear/nuklear.h	/^    int heuristic;$/;"	m	struct:nk_rp_context	typeref:typename:int
@@ -14646,6 +14760,8 @@ img_x	lib/nuklear/example/stb_image.h	/^   stbi__uint32 img_x, img_y;$/;"	m	stru
 img_y	lib/nuklear/example/stb_image.h	/^   stbi__uint32 img_x, img_y;$/;"	m	struct:__anonc731c3c80308	typeref:typename:stbi__uint32
 imgui	lib/cimgui/imgui/examples/apple_example/imguiex-ios/GameViewController.m	/^@property (strong, nonatomic) ImGuiHelper *imgui;$/;"	p	interface:GameViewController
 imgui_example	lib/cimgui/cimgui/Makefile	/^imgui_example:$(OBJS)$/;"	t
+imgui_impl	build/Makefile	/^imgui_impl: cmake_check_build_system$/;"	t
+imgui_impl/fast	build/Makefile	/^imgui_impl\/fast:$/;"	t
 in	lib/nuklear/demo/node_editor.c	/^    struct nk_vec2 in;$/;"	m	struct:node_link	typeref:struct:nk_vec2	file:
 inc_button	lib/nuklear/nuklear.h	/^    struct nk_style_button inc_button;$/;"	m	struct:nk_style_property	typeref:struct:nk_style_button
 inc_button	lib/nuklear/nuklear.h	/^    struct nk_style_button inc_button;$/;"	m	struct:nk_style_scrollbar	typeref:struct:nk_style_button
@@ -14751,6 +14867,7 @@ invert	lib/cimgui/imgui/stb_truetype.h	/^   int invert;$/;"	m	struct:stbtt__edge
 invert	lib/nuklear/nuklear.h	/^    int invert;$/;"	m	struct:nk_tt__edge	typeref:typename:int
 invert	lib/nuklear/src/nuklear_font.c	/^    int invert;$/;"	m	struct:nk_tt__edge	typeref:typename:int	file:
 io	lib/nuklear/example/stb_image.h	/^   stbi_io_callbacks io;$/;"	m	struct:__anonc731c3c80308	typeref:typename:stbi_io_callbacks
+io	src/Gui.c	/^struct ImGuiIO* io; $/;"	v	typeref:struct:ImGuiIO *
 io.xopen	lib/klib/lua/klib.lua	/^function io.xopen(fn, mode)$/;"	f
 io_user_data	lib/nuklear/example/stb_image.h	/^   void *io_user_data;$/;"	m	struct:__anonc731c3c80308	typeref:typename:void *
 is_blank	lib/cimgui/imgui/imgui.h	/^        static bool is_blank(char c) { return c == ' ' || c == '\\t'; }$/;"	f	struct:ImGuiTextFilter::TextRange	typeref:typename:bool
@@ -15229,12 +15346,36 @@ lib/cimgui/cimgui/listClipper.cpp.s	build/Makefile	/^lib\/cimgui\/cimgui\/listCl
 lib/cimgui/cimgui/listClipper.i	build/Makefile	/^lib\/cimgui\/cimgui\/listClipper.i: lib\/cimgui\/cimgui\/listClipper.cpp.i$/;"	t
 lib/cimgui/cimgui/listClipper.o	build/Makefile	/^lib\/cimgui\/cimgui\/listClipper.o: lib\/cimgui\/cimgui\/listClipper.cpp.o$/;"	t
 lib/cimgui/cimgui/listClipper.s	build/Makefile	/^lib\/cimgui\/cimgui\/listClipper.s: lib\/cimgui\/cimgui\/listClipper.cpp.s$/;"	t
+lib/cimgui/imgui/imgui.cpp.i	build/Makefile	/^lib\/cimgui\/imgui\/imgui.cpp.i:$/;"	t
+lib/cimgui/imgui/imgui.cpp.o	build/Makefile	/^lib\/cimgui\/imgui\/imgui.cpp.o:$/;"	t
+lib/cimgui/imgui/imgui.cpp.s	build/Makefile	/^lib\/cimgui\/imgui\/imgui.cpp.s:$/;"	t
+lib/cimgui/imgui/imgui.i	build/Makefile	/^lib\/cimgui\/imgui\/imgui.i: lib\/cimgui\/imgui\/imgui.cpp.i$/;"	t
+lib/cimgui/imgui/imgui.o	build/Makefile	/^lib\/cimgui\/imgui\/imgui.o: lib\/cimgui\/imgui\/imgui.cpp.o$/;"	t
+lib/cimgui/imgui/imgui.s	build/Makefile	/^lib\/cimgui\/imgui\/imgui.s: lib\/cimgui\/imgui\/imgui.cpp.s$/;"	t
+lib/cimgui/imgui/imgui_demo.cpp.i	build/Makefile	/^lib\/cimgui\/imgui\/imgui_demo.cpp.i:$/;"	t
+lib/cimgui/imgui/imgui_demo.cpp.o	build/Makefile	/^lib\/cimgui\/imgui\/imgui_demo.cpp.o:$/;"	t
+lib/cimgui/imgui/imgui_demo.cpp.s	build/Makefile	/^lib\/cimgui\/imgui\/imgui_demo.cpp.s:$/;"	t
+lib/cimgui/imgui/imgui_demo.i	build/Makefile	/^lib\/cimgui\/imgui\/imgui_demo.i: lib\/cimgui\/imgui\/imgui_demo.cpp.i$/;"	t
+lib/cimgui/imgui/imgui_demo.o	build/Makefile	/^lib\/cimgui\/imgui\/imgui_demo.o: lib\/cimgui\/imgui\/imgui_demo.cpp.o$/;"	t
+lib/cimgui/imgui/imgui_demo.s	build/Makefile	/^lib\/cimgui\/imgui\/imgui_demo.s: lib\/cimgui\/imgui\/imgui_demo.cpp.s$/;"	t
+lib/cimgui/imgui/imgui_draw.cpp.i	build/Makefile	/^lib\/cimgui\/imgui\/imgui_draw.cpp.i:$/;"	t
+lib/cimgui/imgui/imgui_draw.cpp.o	build/Makefile	/^lib\/cimgui\/imgui\/imgui_draw.cpp.o:$/;"	t
+lib/cimgui/imgui/imgui_draw.cpp.s	build/Makefile	/^lib\/cimgui\/imgui\/imgui_draw.cpp.s:$/;"	t
+lib/cimgui/imgui/imgui_draw.i	build/Makefile	/^lib\/cimgui\/imgui\/imgui_draw.i: lib\/cimgui\/imgui\/imgui_draw.cpp.i$/;"	t
+lib/cimgui/imgui/imgui_draw.o	build/Makefile	/^lib\/cimgui\/imgui\/imgui_draw.o: lib\/cimgui\/imgui\/imgui_draw.cpp.o$/;"	t
+lib/cimgui/imgui/imgui_draw.s	build/Makefile	/^lib\/cimgui\/imgui\/imgui_draw.s: lib\/cimgui\/imgui\/imgui_draw.cpp.s$/;"	t
 lib/gl3w/GL/gl3w.c.i	build/Makefile	/^lib\/gl3w\/GL\/gl3w.c.i:$/;"	t
 lib/gl3w/GL/gl3w.c.o	build/Makefile	/^lib\/gl3w\/GL\/gl3w.c.o:$/;"	t
 lib/gl3w/GL/gl3w.c.s	build/Makefile	/^lib\/gl3w\/GL\/gl3w.c.s:$/;"	t
 lib/gl3w/GL/gl3w.i	build/Makefile	/^lib\/gl3w\/GL\/gl3w.i: lib\/gl3w\/GL\/gl3w.c.i$/;"	t
 lib/gl3w/GL/gl3w.o	build/Makefile	/^lib\/gl3w\/GL\/gl3w.o: lib\/gl3w\/GL\/gl3w.c.o$/;"	t
 lib/gl3w/GL/gl3w.s	build/Makefile	/^lib\/gl3w\/GL\/gl3w.s: lib\/gl3w\/GL\/gl3w.c.s$/;"	t
+lib/imgui_gl3/imgui_impl_glfw_gl3.cpp.i	build/Makefile	/^lib\/imgui_gl3\/imgui_impl_glfw_gl3.cpp.i:$/;"	t
+lib/imgui_gl3/imgui_impl_glfw_gl3.cpp.o	build/Makefile	/^lib\/imgui_gl3\/imgui_impl_glfw_gl3.cpp.o:$/;"	t
+lib/imgui_gl3/imgui_impl_glfw_gl3.cpp.s	build/Makefile	/^lib\/imgui_gl3\/imgui_impl_glfw_gl3.cpp.s:$/;"	t
+lib/imgui_gl3/imgui_impl_glfw_gl3.i	build/Makefile	/^lib\/imgui_gl3\/imgui_impl_glfw_gl3.i: lib\/imgui_gl3\/imgui_impl_glfw_gl3.cpp.i$/;"	t
+lib/imgui_gl3/imgui_impl_glfw_gl3.o	build/Makefile	/^lib\/imgui_gl3\/imgui_impl_glfw_gl3.o: lib\/imgui_gl3\/imgui_impl_glfw_gl3.cpp.o$/;"	t
+lib/imgui_gl3/imgui_impl_glfw_gl3.s	build/Makefile	/^lib\/imgui_gl3\/imgui_impl_glfw_gl3.s: lib\/imgui_gl3\/imgui_impl_glfw_gl3.cpp.s$/;"	t
 libgl	lib/cimgui/imgui/examples/libs/gl3w/GL/gl3w.c	/^static HMODULE libgl;$/;"	v	typeref:typename:HMODULE	file:
 libgl	lib/cimgui/imgui/examples/libs/gl3w/GL/gl3w.c	/^static void *libgl;$/;"	v	typeref:typename:void *	file:
 libgl	lib/gl3w/GL/gl3w.c	/^static HMODULE libgl;$/;"	v	typeref:typename:HMODULE	file:
@@ -15273,7 +15414,7 @@ loadShaders	lib/cimgui/imgui/examples/apple_example/imguiex-ios/GameViewControll
 loadShaders	lib/cimgui/imgui/examples/apple_example/imguiex-ios/GameViewController.m	/^{$/;"	m	implementation:GameViewController
 load_block_from_cache	lib/klib/bgzf.c	/^static int load_block_from_cache(BGZF *fp, int64_t block_address) {return 0;}$/;"	f	typeref:typename:int	file:
 load_block_from_cache	lib/klib/bgzf.c	/^static int load_block_from_cache(BGZF *fp, int64_t block_address)$/;"	f	typeref:typename:int	file:
-load_file	src/shader.c	/^load_file($/;"	f	typeref:typename:void	file:
+load_file	src/Shader.c	/^load_file($/;"	f	typeref:typename:void	file:
 load_jpeg_image	lib/nuklear/example/stb_image.h	/^static stbi_uc *load_jpeg_image(stbi__jpeg *z, int *out_x, int *out_y, int *comp, int req_comp)$/;"	f	typeref:typename:stbi_uc *
 load_procs	lib/cimgui/imgui/examples/libs/gl3w/GL/gl3w.c	/^static void load_procs(void)$/;"	f	typeref:typename:void	file:
 load_procs	lib/gl3w/GL/gl3w.c	/^static void load_procs(void)$/;"	f	typeref:typename:void	file:
@@ -15289,7 +15430,7 @@ m	lib/klib/knhx.h	/^	size_t l, m;$/;"	m	struct:__kstring_t	typeref:typename:size
 m	lib/klib/kseq.h	/^	size_t l, m;$/;"	m	struct:__kstring_t	typeref:typename:size_t
 m	lib/klib/kstring.h	/^	size_t l, m;$/;"	m	struct:__kstring_t	typeref:typename:size_t
 m	lib/klib/kurl.c	/^typedef struct { int l, m; char *s; } kstring_t;$/;"	m	struct:__anonf630694b0408	typeref:typename:int	file:
-m	src/obj.h	/^    mat4x4 m;$/;"	m	struct:obj_t	typeref:typename:mat4x4
+m	src/Drawable.h	/^    mat4x4  m;$/;"	m	struct:Drawable	typeref:typename:mat4x4
 m_buf	lib/klib/kurl.c	/^	int m_buf;    \/\/ max buffer size; for a remote file, CURL_MAX_WRITE_SIZE*2 is recommended$/;"	m	struct:kurl_t	typeref:typename:int	file:
 m_clientHeight	lib/cimgui/imgui/examples/libs/usynergy/uSynergy.h	/^	uint16_t						m_clientHeight;									\/* Height of screen *\/$/;"	m	struct:__anon77dd0a3a0208	typeref:typename:uint16_t
 m_clientName	lib/cimgui/imgui/examples/libs/usynergy/uSynergy.h	/^	const char*						m_clientName;									\/* Name of Synergy Screen \/ Client *\/$/;"	m	struct:__anon77dd0a3a0208	typeref:typename:const char *
@@ -15525,6 +15666,7 @@ mode	lib/nuklear/nuklear.h	/^    unsigned char mode;$/;"	m	struct:nk_edit_state	
 mode	lib/nuklear/nuklear.h	/^    unsigned char mode;$/;"	m	struct:nk_text_edit	typeref:typename:unsigned char
 mode	lib/nuklear/src/nuklear.h	/^    unsigned char mode;$/;"	m	struct:nk_edit_state	typeref:typename:unsigned char
 mode	lib/nuklear/src/nuklear.h	/^    unsigned char mode;$/;"	m	struct:nk_text_edit	typeref:typename:unsigned char
+mode	src/Drawable.h	/^    GLenum  mode;$/;"	m	struct:Drawable	typeref:typename:GLenum
 mode2level	lib/klib/bgzf.c	/^static int mode2level(const char *__restrict mode)$/;"	f	typeref:typename:int	file:
 modelViewProjectionMatrix	lib/cimgui/imgui/examples/apple_example/imguiex-ios/GameViewController.m	/^    GLKMatrix4 _modelViewProjectionMatrix;$/;"	E	interface:GameViewController
 morecore	lib/klib/kalloc.c	/^static header_t *morecore(kmem_t *km, size_t nu)$/;"	f	typeref:typename:header_t *	file:
@@ -15542,7 +15684,7 @@ mutex	lib/klib/kthread.c	/^	pthread_mutex_t mutex;$/;"	m	struct:ktp_t	typeref:ty
 mvp	lib/cimgui/imgui/examples/directx10_example/imgui_impl_dx10.cpp	/^    float        mvp[4][4];$/;"	m	struct:VERTEX_CONSTANT_BUFFER	typeref:typename:float[4][4]	file:
 mvp	lib/cimgui/imgui/examples/directx11_example/imgui_impl_dx11.cpp	/^    float        mvp[4][4];$/;"	m	struct:VERTEX_CONSTANT_BUFFER	typeref:typename:float[4][4]	file:
 mvp	lib/cimgui/imgui/examples/directx12_example/imgui_impl_dx12.cpp	/^    float        mvp[4][4];$/;"	m	struct:VERTEX_CONSTANT_BUFFER	typeref:typename:float[4][4]	file:
-mvp	src/shader.h	/^	GLuint mvp;$/;"	m	struct:__anonfcf7e1690108	typeref:typename:GLuint
+mvp	src/Shader.h	/^    GLuint mvp;$/;"	m	struct:__anon74bd45490108	typeref:typename:GLuint
 my_cmp	lib/klib/test/kavl_test.c	/^#define my_cmp(/;"	d	file:
 my_netread	lib/klib/knetfile.c	/^static off_t my_netread(int fd, void *buf, off_t len)$/;"	f	typeref:typename:off_t	file:
 my_node	lib/klib/test/kavl_test.c	/^struct my_node {$/;"	s	file:
@@ -18075,15 +18217,8 @@ num_remaining_in_head_chunk	lib/cimgui/imgui/stb_truetype.h	/^   int    num_rema
 num_remaining_in_head_chunk	lib/nuklear/nuklear.h	/^    int    num_remaining_in_head_chunk;$/;"	m	struct:nk_tt__hheap	typeref:typename:int
 num_remaining_in_head_chunk	lib/nuklear/src/nuklear_font.c	/^    int    num_remaining_in_head_chunk;$/;"	m	struct:nk_tt__hheap	typeref:typename:int	file:
 num_vertices	lib/cimgui/imgui/stb_truetype.h	/^   int num_vertices;$/;"	m	struct:__anonc4c159420f08	typeref:typename:int
-obj_ctor	src/obj.c	/^obj_ctor() {$/;"	f	typeref:typename:obj_p
-obj_dtor	src/obj.c	/^obj_dtor(obj_p obj) {$/;"	f	typeref:typename:void
-obj_p	src/obj.h	/^typedef obj_t* obj_p;$/;"	t	typeref:typename:obj_t *
-obj_plane	src/obj.c	/^obj_plane() {$/;"	f	typeref:typename:obj_p
-obj_render	src/obj.c	/^obj_render(obj_p obj) {$/;"	f	typeref:typename:void
-obj_t	src/obj.h	/^typedef struct obj_t {$/;"	s
-obj_t	src/obj.h	/^} obj_t;$/;"	t	typeref:struct:obj_t
-objects	src/scene.h	/^    objects_v objects;$/;"	m	struct:scene_t	typeref:typename:objects_v
-objects_v	src/scene.h	/^typedef kvec_t(obj_p) objects_v;$/;"	t
+objects	src/Scene.h	/^    objects_v objects;$/;"	m	struct:Scene	typeref:typename:objects_v
+objects_v	src/Scene.h	/^typedef kvec_t(Drawable*) objects_v;$/;"	t
 obs	lib/klib/khmm.h	/^	int l, *obs;$/;"	m	struct:__anonf542711f0408	typeref:typename:int *
 off0	lib/klib/kurl.c	/^	off_t off0;   \/\/ offset of the first byte in the buffer; the actual file offset equals off0 +/;"	m	struct:kurl_t	typeref:typename:off_t	file:
 offset	lib/klib/knetfile.h	/^	int64_t offset;$/;"	m	struct:knetFile_s	typeref:typename:int64_t
@@ -18117,6 +18252,7 @@ old	lib/nuklear/src/nuklear.h	/^    unsigned int old;$/;"	m	struct:nk_edit_state
 old	lib/nuklear/src/nuklear.h	/^    unsigned int old;$/;"	m	struct:nk_property_state	typeref:typename:unsigned int
 old_out	lib/nuklear/example/stb_image.h	/^   stbi_uc *out, *old_out;             \/\/ output buffer (always 4 components)$/;"	m	struct:__anonc731c3c81008	typeref:typename:stbi_uc **
 omit_includes	lib/nuklear/src/build.py	/^def omit_includes(str, files):$/;"	f
+onResize	src/App.c	/^onResize(GLFWwindow* win, int width, int height) {$/;"	f	typeref:typename:void	file:
 onServernameTapped:	lib/cimgui/imgui/examples/apple_example/imguiex-ios/GameViewController.m	/^- (IBAction)onServernameTapped:(id)sender;$/;"	m	interface:GameViewController
 onServernameTapped:	lib/cimgui/imgui/examples/apple_example/imguiex-ios/GameViewController.m	/^{$/;"	m	implementation:GameViewController
 op	lib/klib/kexpr.c	/^	int32_t op:8, n_args:24; \/\/ op: operator, n_args: number of arguments$/;"	m	struct:ke1_s	typeref:typename:int32_t:8	file:
@@ -18173,7 +18309,7 @@ p	lib/klib/khmm.h	/^	int *p; \/\/ posterior decoding$/;"	m	struct:__anonf542711f
 p	lib/klib/kstring.h	/^	const char *p; \/\/ end of the current token$/;"	m	struct:__anon959017540108	typeref:typename:const char *
 p	lib/nuklear/nuklear.h	/^    struct nk_font_config *p;$/;"	m	struct:nk_font_config	typeref:struct:nk_font_config *
 p	lib/nuklear/src/nuklear.h	/^    struct nk_font_config *p;$/;"	m	struct:nk_font_config	typeref:struct:nk_font_config *
-p	src/scene.h	/^    mat4x4 p,v;$/;"	m	struct:scene_t	typeref:typename:mat4x4
+p	src/Scene.h	/^    mat4x4 p,v;$/;"	m	struct:Scene	typeref:typename:mat4x4
 p_buf	lib/klib/kurl.c	/^	int p_buf;    \/\/ file position in the buffer; p_buf <= l_buf$/;"	m	struct:kurl_t	typeref:typename:int	file:
 packInt32	lib/klib/bgzf.c	/^static inline void packInt32(uint8_t *buffer, uint32_t value)$/;"	f	typeref:typename:void	file:
 pack_info	lib/cimgui/imgui/stb_truetype.h	/^   void *pack_info;$/;"	m	struct:stbtt_pack_context	typeref:typename:void *
@@ -18309,7 +18445,7 @@ pos	lib/cimgui/imgui/examples/directx9_example/imgui_impl_dx9.cpp	/^    float   
 pos	lib/cimgui/imgui/imgui.h	/^    ImVec2  pos;$/;"	m	struct:ImDrawVert	typeref:typename:ImVec2
 pos	lib/nuklear/nuklear.h	/^    struct nk_vec2 pos;$/;"	m	struct:nk_mouse	typeref:struct:nk_vec2
 pos	lib/nuklear/src/nuklear.h	/^    struct nk_vec2 pos;$/;"	m	struct:nk_mouse	typeref:struct:nk_vec2
-pos	src/shader.h	/^	GLuint pos;$/;"	m	struct:__anonfcf7e1690108	typeref:typename:GLuint
+pos	src/Shader.h	/^    GLuint pos;$/;"	m	struct:__anon74bd45490108	typeref:typename:GLuint
 position	lib/nuklear/demo/d3d11/nuklear_d3d11.h	/^    float position[2];$/;"	m	struct:nk_d3d11_vertex	typeref:typename:float[2]
 position	lib/nuklear/demo/d3d9/nuklear_d3d9.h	/^    float position[3];$/;"	m	struct:nk_d3d9_vertex	typeref:typename:float[3]
 position	lib/nuklear/demo/glfw_opengl2/nuklear_glfw_gl2.h	/^    float position[2];$/;"	m	struct:nk_glfw_vertex	typeref:typename:float[2]
@@ -18373,7 +18509,7 @@ prog	lib/nuklear/example/canvas.c	/^    GLuint prog;$/;"	m	struct:device	typeref
 prog	lib/nuklear/example/extended.c	/^    GLuint prog;$/;"	m	struct:device	typeref:typename:GLuint	file:
 prog	lib/nuklear/example/file_browser.c	/^    GLuint prog;$/;"	m	struct:device	typeref:typename:GLuint	file:
 prog	lib/nuklear/example/skinning.c	/^    GLuint prog;$/;"	m	struct:device	typeref:typename:GLuint	file:
-prog	src/shader.h	/^	GLuint prog;$/;"	m	struct:__anonfcf7e1690108	typeref:typename:GLuint
+prog	src/Shader.h	/^    GLuint prog;$/;"	m	struct:__anon74bd45490108	typeref:typename:GLuint
 proggy_clean_ttf_compressed_data_base85	lib/cimgui/imgui/imgui_draw.cpp	/^static const char proggy_clean_ttf_compressed_data_base85[11980+1] =$/;"	v	typeref:typename:const char[]	file:
 program	lib/cimgui/imgui/examples/apple_example/imguiex-ios/GameViewController.m	/^    GLuint _program;$/;"	E	interface:GameViewController
 progress	lib/nuklear/nuklear.h	/^    struct nk_style_progress progress;$/;"	m	struct:nk_style	typeref:struct:nk_style_progress
@@ -18445,6 +18581,7 @@ rasterizer_state	lib/nuklear/demo/d3d11/nuklear_d3d11.h	/^    ID3D11RasterizerSt
 ratio	lib/nuklear/example/stb_image.h	/^   int flags, bgindex, ratio, transparent, eflags, delay;$/;"	m	struct:__anonc731c3c81008	typeref:typename:int
 ratio	lib/nuklear/nuklear.h	/^    const float *ratio;$/;"	m	struct:nk_row_layout	typeref:typename:const float *
 ratio	lib/nuklear/src/nuklear.h	/^    const float *ratio;$/;"	m	struct:nk_row_layout	typeref:typename:const float *
+ratio	src/Scene.h	/^    float ratio; $/;"	m	struct:Scene	typeref:typename:float
 raw_coeff	lib/nuklear/example/stb_image.h	/^      void *raw_data, *raw_coeff;$/;"	m	struct:__anonc731c3c80608::__anonc731c3c80708	typeref:typename:void **
 raw_data	lib/nuklear/example/stb_image.h	/^      void *raw_data, *raw_coeff;$/;"	m	struct:__anonc731c3c80608::__anonc731c3c80708	typeref:typename:void *
 rawfb_context	lib/nuklear/demo/x11_rawfb/nuklear_rawfb.h	/^struct rawfb_context {$/;"	s
@@ -18616,14 +18753,7 @@ scale	lib/nuklear/src/nuklear.h	/^    float scale;$/;"	m	struct:nk_font	typeref:
 scaler	lib/nuklear/nuklear.h	/^    struct nk_style_item scaler;$/;"	m	struct:nk_style_window	typeref:struct:nk_style_item
 scaler	lib/nuklear/src/nuklear.h	/^    struct nk_style_item scaler;$/;"	m	struct:nk_style_window	typeref:struct:nk_style_item
 scan_n	lib/nuklear/example/stb_image.h	/^   int scan_n, order[4];$/;"	m	struct:__anonc731c3c80608	typeref:typename:int
-scene	src/bbgl.c	/^scene_p scene;$/;"	v	typeref:typename:scene_p
-scene_add_obj	src/scene.c	/^scene_add_obj(scene_p scene, obj_p obj) {$/;"	f	typeref:typename:void
-scene_ctor	src/scene.c	/^scene_ctor() {$/;"	f	typeref:typename:scene_p
-scene_dtor	src/scene.c	/^scene_dtor(scene_p scene) { $/;"	f	typeref:typename:void
-scene_p	src/scene.h	/^typedef scene_t* scene_p;$/;"	t	typeref:typename:scene_t *
-scene_render	src/scene.c	/^scene_render(scene_p scene) {$/;"	f	typeref:typename:void
-scene_t	src/scene.h	/^typedef struct scene_t {$/;"	s
-scene_t	src/scene.h	/^} scene_t;$/;"	t	typeref:struct:scene_t
+scene	src/App.c	/^Scene* scene;$/;"	v	typeref:typename:Scene *
 scissors	lib/nuklear/demo/x11_rawfb/nuklear_rawfb.h	/^    struct nk_rect scissors;$/;"	m	struct:rawfb_context	typeref:struct:nk_rect
 score	lib/klib/ksw.h	/^	int score; \/\/ best score$/;"	m	struct:__anon7bd1e0a70108	typeref:typename:int
 score2	lib/klib/ksw.h	/^	int score2, te2; \/\/ second best score and ending position on the target$/;"	m	struct:__anon7bd1e0a70108	typeref:typename:int
@@ -18735,13 +18865,7 @@ sha1_write	lib/klib/kurl.c	/^void sha1_write(sha1nfo *s, const char *data, size_
 sha1_write1	lib/klib/kurl.c	/^void sha1_write1(sha1nfo *s, uint8_t data)$/;"	f	typeref:typename:void
 sha1nfo	lib/klib/kurl.c	/^typedef struct sha1nfo {$/;"	s	file:
 sha1nfo	lib/klib/kurl.c	/^} sha1nfo;$/;"	t	typeref:struct:sha1nfo	file:
-shader	src/scene.c	/^shader_p shader;$/;"	v	typeref:typename:shader_p
-shader_ctor	src/shader.c	/^shader_ctor(char* shader_name) {$/;"	f	typeref:typename:shader_p
-shader_dtor	src/shader.c	/^shader_dtor(shader_p shader) {$/;"	f	typeref:typename:void
-shader_p	src/shader.h	/^typedef shader_t* shader_p;$/;"	t	typeref:typename:shader_t *
-shader_start	src/shader.c	/^shader_start(shader_p shader) {$/;"	f	typeref:typename:void
-shader_stop	src/shader.c	/^shader_stop(shader_p shader) {$/;"	f	typeref:typename:void
-shader_t	src/shader.h	/^} shader_t;$/;"	t	typeref:struct:__anonfcf7e1690108
+shader	src/Scene.c	/^Shader* shader;$/;"	v	typeref:typename:Shader *
 shape_AA	lib/nuklear/nuklear.h	/^    enum nk_anti_aliasing shape_AA; \/* shape anti-aliasing flag can be turned off if you are ti/;"	m	struct:nk_convert_config	typeref:enum:nk_anti_aliasing
 shape_AA	lib/nuklear/nuklear.h	/^    enum nk_anti_aliasing shape_AA;$/;"	m	struct:nk_draw_list	typeref:enum:nk_anti_aliasing
 shape_AA	lib/nuklear/src/nuklear.h	/^    enum nk_anti_aliasing shape_AA; \/* shape anti-aliasing flag can be turned off if you are ti/;"	m	struct:nk_convert_config	typeref:enum:nk_anti_aliasing
@@ -18815,7 +18939,7 @@ size	lib/nuklear/src/nuklear.h	/^    unsigned int size;$/;"	m	struct:nk_page	typ
 size	lib/nuklear/src/nuklear.h	/^    unsigned int size;$/;"	m	struct:nk_table	typeref:typename:unsigned int
 size	lib/nuklear/src/nuklear.h	/^struct nk_cursor {struct nk_image img; struct nk_vec2 size, offset;};$/;"	m	struct:nk_cursor	typeref:struct:nk_vec2
 size	lib/nuklear/src/nuklear.h	/^struct nk_memory {void *ptr;nk_size size;};$/;"	m	struct:nk_memory	typeref:typename:nk_size
-size	src/obj.h	/^    size_t size;$/;"	m	struct:obj_t	typeref:typename:size_t
+size	src/Drawable.h	/^    GLsizei size;$/;"	m	struct:Drawable	typeref:typename:GLsizei
 size_cmd	lib/klib/knetfile.h	/^	char *response, *retr, *size_cmd;$/;"	m	struct:knetFile_s	typeref:typename:char ***
 skin	lib/nuklear/example/skinning.c	/^    GLint skin;$/;"	m	struct:media	typeref:typename:GLint	file:
 skinning	lib/nuklear/example/Makefile	/^skinning: generate$/;"	t
@@ -18864,42 +18988,48 @@ spec_end	lib/nuklear/example/stb_image.h	/^   int            spec_end;$/;"	m	str
 spec_start	lib/nuklear/example/stb_image.h	/^   int            spec_start;$/;"	m	struct:__anonc731c3c80608	typeref:typename:int
 split	lib/cimgui/imgui/imgui.cpp	/^void ImGuiTextFilter::TextRange::split(char separator, ImVector<TextRange>& out)$/;"	f	class:ImGuiTextFilter::TextRange	typeref:typename:void
 src	lib/nuklear/package.json	/^  "src": ["nuklear.h"]$/;"	a
-src/bbgl.c.i	build/Makefile	/^src\/bbgl.c.i:$/;"	t
-src/bbgl.c.o	build/Makefile	/^src\/bbgl.c.o:$/;"	t
-src/bbgl.c.s	build/Makefile	/^src\/bbgl.c.s:$/;"	t
-src/bbgl.i	build/Makefile	/^src\/bbgl.i: src\/bbgl.c.i$/;"	t
-src/bbgl.o	build/Makefile	/^src\/bbgl.o: src\/bbgl.c.o$/;"	t
-src/bbgl.s	build/Makefile	/^src\/bbgl.s: src\/bbgl.c.s$/;"	t
-src/gui.c.i	build/Makefile	/^src\/gui.c.i:$/;"	t
-src/gui.c.o	build/Makefile	/^src\/gui.c.o:$/;"	t
-src/gui.c.s	build/Makefile	/^src\/gui.c.s:$/;"	t
-src/gui.i	build/Makefile	/^src\/gui.i: src\/gui.c.i$/;"	t
-src/gui.o	build/Makefile	/^src\/gui.o: src\/gui.c.o$/;"	t
-src/gui.s	build/Makefile	/^src\/gui.s: src\/gui.c.s$/;"	t
+src/App.c.i	build/Makefile	/^src\/App.c.i:$/;"	t
+src/App.c.o	build/Makefile	/^src\/App.c.o:$/;"	t
+src/App.c.s	build/Makefile	/^src\/App.c.s:$/;"	t
+src/App.i	build/Makefile	/^src\/App.i: src\/App.c.i$/;"	t
+src/App.o	build/Makefile	/^src\/App.o: src\/App.c.o$/;"	t
+src/App.s	build/Makefile	/^src\/App.s: src\/App.c.s$/;"	t
+src/Drawable.c.i	build/Makefile	/^src\/Drawable.c.i:$/;"	t
+src/Drawable.c.o	build/Makefile	/^src\/Drawable.c.o:$/;"	t
+src/Drawable.c.s	build/Makefile	/^src\/Drawable.c.s:$/;"	t
+src/Drawable.i	build/Makefile	/^src\/Drawable.i: src\/Drawable.c.i$/;"	t
+src/Drawable.o	build/Makefile	/^src\/Drawable.o: src\/Drawable.c.o$/;"	t
+src/Drawable.s	build/Makefile	/^src\/Drawable.s: src\/Drawable.c.s$/;"	t
+src/Gui.c.i	build/Makefile	/^src\/Gui.c.i:$/;"	t
+src/Gui.c.o	build/Makefile	/^src\/Gui.c.o:$/;"	t
+src/Gui.c.s	build/Makefile	/^src\/Gui.c.s:$/;"	t
+src/Gui.i	build/Makefile	/^src\/Gui.i: src\/Gui.c.i$/;"	t
+src/Gui.o	build/Makefile	/^src\/Gui.o: src\/Gui.c.o$/;"	t
+src/Gui.s	build/Makefile	/^src\/Gui.s: src\/Gui.c.s$/;"	t
+src/Scene.c.i	build/Makefile	/^src\/Scene.c.i:$/;"	t
+src/Scene.c.o	build/Makefile	/^src\/Scene.c.o:$/;"	t
+src/Scene.c.s	build/Makefile	/^src\/Scene.c.s:$/;"	t
+src/Scene.i	build/Makefile	/^src\/Scene.i: src\/Scene.c.i$/;"	t
+src/Scene.o	build/Makefile	/^src\/Scene.o: src\/Scene.c.o$/;"	t
+src/Scene.s	build/Makefile	/^src\/Scene.s: src\/Scene.c.s$/;"	t
+src/Shader.c.i	build/Makefile	/^src\/Shader.c.i:$/;"	t
+src/Shader.c.o	build/Makefile	/^src\/Shader.c.o:$/;"	t
+src/Shader.c.s	build/Makefile	/^src\/Shader.c.s:$/;"	t
+src/Shader.i	build/Makefile	/^src\/Shader.i: src\/Shader.c.i$/;"	t
+src/Shader.o	build/Makefile	/^src\/Shader.o: src\/Shader.c.o$/;"	t
+src/Shader.s	build/Makefile	/^src\/Shader.s: src\/Shader.c.s$/;"	t
+src/Shape.c.i	build/Makefile	/^src\/Shape.c.i:$/;"	t
+src/Shape.c.o	build/Makefile	/^src\/Shape.c.o:$/;"	t
+src/Shape.c.s	build/Makefile	/^src\/Shape.c.s:$/;"	t
+src/Shape.i	build/Makefile	/^src\/Shape.i: src\/Shape.c.i$/;"	t
+src/Shape.o	build/Makefile	/^src\/Shape.o: src\/Shape.c.o$/;"	t
+src/Shape.s	build/Makefile	/^src\/Shape.s: src\/Shape.c.s$/;"	t
 src/main.c.i	build/Makefile	/^src\/main.c.i:$/;"	t
 src/main.c.o	build/Makefile	/^src\/main.c.o:$/;"	t
 src/main.c.s	build/Makefile	/^src\/main.c.s:$/;"	t
 src/main.i	build/Makefile	/^src\/main.i: src\/main.c.i$/;"	t
 src/main.o	build/Makefile	/^src\/main.o: src\/main.c.o$/;"	t
 src/main.s	build/Makefile	/^src\/main.s: src\/main.c.s$/;"	t
-src/obj.c.i	build/Makefile	/^src\/obj.c.i:$/;"	t
-src/obj.c.o	build/Makefile	/^src\/obj.c.o:$/;"	t
-src/obj.c.s	build/Makefile	/^src\/obj.c.s:$/;"	t
-src/obj.i	build/Makefile	/^src\/obj.i: src\/obj.c.i$/;"	t
-src/obj.o	build/Makefile	/^src\/obj.o: src\/obj.c.o$/;"	t
-src/obj.s	build/Makefile	/^src\/obj.s: src\/obj.c.s$/;"	t
-src/scene.c.i	build/Makefile	/^src\/scene.c.i:$/;"	t
-src/scene.c.o	build/Makefile	/^src\/scene.c.o:$/;"	t
-src/scene.c.s	build/Makefile	/^src\/scene.c.s:$/;"	t
-src/scene.i	build/Makefile	/^src\/scene.i: src\/scene.c.i$/;"	t
-src/scene.o	build/Makefile	/^src\/scene.o: src\/scene.c.o$/;"	t
-src/scene.s	build/Makefile	/^src\/scene.s: src\/scene.c.s$/;"	t
-src/shader.c.i	build/Makefile	/^src\/shader.c.i:$/;"	t
-src/shader.c.o	build/Makefile	/^src\/shader.c.o:$/;"	t
-src/shader.c.s	build/Makefile	/^src\/shader.c.s:$/;"	t
-src/shader.i	build/Makefile	/^src\/shader.i: src\/shader.c.i$/;"	t
-src/shader.o	build/Makefile	/^src\/shader.o: src\/shader.c.o$/;"	t
-src/shader.s	build/Makefile	/^src\/shader.s: src\/shader.c.s$/;"	t
 sse2_bit_count32	lib/klib/test/kbit_test.c	/^static uint32_t sse2_bit_count32(const __m128i* block, const __m128i* block_end)$/;"	f	typeref:typename:uint32_t	file:
 stack	lib/klib/kbtree.h	/^	kbpos_t stack[KB_MAX_DEPTH], *p;$/;"	m	struct:__anon929281af0308	typeref:typename:kbpos_t[]
 stacks	lib/nuklear/nuklear.h	/^    struct nk_configuration_stacks stacks;$/;"	m	struct:nk_context	typeref:struct:nk_configuration_stacks
@@ -19782,7 +19912,7 @@ uv	lib/nuklear/src/nuklear.h	/^    struct nk_vec2 uv[2];$/;"	m	struct:nk_user_fo
 v	lib/klib/khmm.h	/^	int *v; \/\/ Viterbi path$/;"	m	struct:__anonf542711f0208	typeref:typename:int *
 v	lib/klib/kson.h	/^	} v;$/;"	m	struct:kson_node_s	typeref:union:kson_node_s::__anonf60a9bad010a
 v	lib/nuklear/example/stb_image.h	/^      int h,v;$/;"	m	struct:__anonc731c3c80608::__anonc731c3c80708	typeref:typename:int
-v	src/scene.h	/^    mat4x4 p,v;$/;"	m	struct:scene_t	typeref:typename:mat4x4
+v	src/Scene.h	/^    mat4x4 p,v;$/;"	m	struct:Scene	typeref:typename:mat4x4
 v0	lib/nuklear/nuklear.h	/^    float u0, v0, u1, v1;$/;"	m	struct:nk_font_glyph	typeref:typename:float
 v0	lib/nuklear/src/nuklear.h	/^    float u0, v0, u1, v1;$/;"	m	struct:nk_font_glyph	typeref:typename:float
 v1	lib/nuklear/nuklear.h	/^    float u0, v0, u1, v1;$/;"	m	struct:nk_font_glyph	typeref:typename:float
@@ -19825,7 +19955,7 @@ vao	lib/nuklear/example/canvas.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device
 vao	lib/nuklear/example/extended.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vao	lib/nuklear/example/file_browser.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vao	lib/nuklear/example/skinning.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
-vao	src/obj.h	/^    GLuint vao;$/;"	m	struct:obj_t	typeref:typename:GLuint
+vao	src/Drawable.h	/^    GLuint  vao;$/;"	m	struct:Drawable	typeref:typename:GLuint
 vbo	lib/nuklear/demo/glfw_opengl3/nuklear_glfw_gl3.h	/^    GLuint vbo, vao, ebo;$/;"	m	struct:nk_glfw_device	typeref:typename:GLuint
 vbo	lib/nuklear/demo/glfw_opengl4/nuklear_glfw_gl4.h	/^    GLuint vbo, vao, ebo;$/;"	m	struct:nk_glfw_device	typeref:typename:GLuint
 vbo	lib/nuklear/demo/sdl_opengl3/nuklear_sdl_gl3.h	/^    GLuint vbo, vao, ebo;$/;"	m	struct:nk_sdl_device	typeref:typename:GLuint
@@ -19836,7 +19966,7 @@ vbo	lib/nuklear/example/canvas.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device
 vbo	lib/nuklear/example/extended.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vbo	lib/nuklear/example/file_browser.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
 vbo	lib/nuklear/example/skinning.c	/^    GLuint vbo, vao, ebo;$/;"	m	struct:device	typeref:typename:GLuint	file:
-vbo	src/obj.h	/^    GLuint vbo;$/;"	m	struct:obj_t	typeref:typename:GLuint
+vbo	src/Drawable.h	/^    GLuint  vbo;$/;"	m	struct:Drawable	typeref:typename:GLuint
 vc	lib/nuklear/demo/sdl_opengles2/nuklear_sdl_gles2.h	/^    size_t vp, vt, vc;$/;"	m	struct:nk_sdl_device	typeref:typename:size_t
 vec3_mul_cross	lib/linmath/linmath.h	/^static inline void vec3_mul_cross(vec3 r, vec3 const a, vec3 const b)$/;"	f
 vec3_reflect	lib/linmath/linmath.h	/^static inline void vec3_reflect(vec3 r, vec3 const v, vec3 const n)$/;"	f	typeref:typename:void
@@ -19977,7 +20107,7 @@ width	lib/nuklear/src/nuklear.h	/^    float width, height;$/;"	m	struct:nk_user_
 width	lib/nuklear/src/nuklear.h	/^    nk_text_width_f width;$/;"	m	struct:nk_user_font	typeref:typename:nk_text_width_f
 width	lib/nuklear/src/nuklear_font.c	/^    int   width;$/;"	m	struct:nk_tt_pack_context	typeref:typename:int	file:
 width	lib/nuklear/src/nuklear_font.c	/^    int width;$/;"	m	struct:nk_rp_context	typeref:typename:int	file:
-width	src/bbgl.c	/^int width = 0, height = 0;$/;"	v	typeref:typename:int
+width	src/App.c	/^int width = 0, height = 0;$/;"	v	typeref:typename:int
 win	lib/nuklear/demo/glfw_opengl2/nuklear_glfw_gl2.h	/^    GLFWwindow *win;$/;"	m	struct:nk_glfw	typeref:typename:GLFWwindow *
 win	lib/nuklear/demo/glfw_opengl3/nuklear_glfw_gl3.h	/^    GLFWwindow *win;$/;"	m	struct:nk_glfw	typeref:typename:GLFWwindow *
 win	lib/nuklear/demo/glfw_opengl4/nuklear_glfw_gl4.h	/^    GLFWwindow *win;$/;"	m	struct:nk_glfw	typeref:typename:GLFWwindow *
@@ -19997,7 +20127,7 @@ win	lib/nuklear/nuklear.h	/^    struct nk_window win;$/;"	m	union:nk_page_data	t
 win	lib/nuklear/src/nuklear.h	/^    struct nk_page_element win[1];$/;"	m	struct:nk_page	typeref:struct:nk_page_element[1]
 win	lib/nuklear/src/nuklear.h	/^    struct nk_window *win;$/;"	m	struct:nk_popup_state	typeref:struct:nk_window *
 win	lib/nuklear/src/nuklear.h	/^    struct nk_window win;$/;"	m	union:nk_page_data	typeref:struct:nk_window
-win	src/bbgl.c	/^static GLFWwindow *win;$/;"	v	typeref:typename:GLFWwindow *	file:
+win	src/App.c	/^static GLFWwindow *win;$/;"	v	typeref:typename:GLFWwindow *	file:
 window	lib/cimgui/imgui/examples/apple_example/imguiex-ios/AppDelegate.h	/^@property (strong, nonatomic) UIWindow *window;$/;"	p	interface:AppDelegate
 window	lib/cimgui/imgui/examples/apple_example/imguiex-osx/AppDelegate.m	/^@property (weak) IBOutlet NSWindow *window;$/;"	p	interface:AppDelegate
 window	lib/nuklear/demo/gdip/nuklear_gdip.h	/^    GpGraphics *window;$/;"	m	struct:__anon66f154fe0d08	typeref:typename:GpGraphics *

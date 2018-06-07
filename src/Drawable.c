@@ -28,6 +28,7 @@ Release(Drawable* drawable) {
 static void 
 Render(Drawable* drawable) {
     glBindVertexArray(drawable->vao);
+    // printf("%d", drawable->vao);
     //glEnableVertexAttribArray(0);
     //glEnableVertexAttribArray(1);
     glDrawArrays(drawable->mode, 0, drawable->size);

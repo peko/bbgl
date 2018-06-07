@@ -8,8 +8,8 @@ struct Shape {
 };
 
 struct AShape {
-	Shape* (*Create )();
-	void   (*Init   )(Shape*);
-	void   (*Release)(Shape*);
+    Shape* (*Create )();
+    void   (*Init   )(Shape*);
+    void   (*Release)(Shape*);
 };
 extern struct AShape AShape[1];

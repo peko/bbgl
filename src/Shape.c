@@ -6,18 +6,19 @@ static void InitPlane(Shape*);
 
 static void
 Init(Shape* outShape) {
-	InitPlane(outShape);
+    ADrawable->Init(outShape->drawable);
+    InitPlane(outShape);
 }
 static Shape*
 Create() {
-	Shape* shape = malloc(sizeof(Shape));
-	Init(shape);
-	return shape;
+    Shape* shape = malloc(sizeof(Shape));
+    Init(shape);
+    return shape;
 }
 
 static void
 Release(Shape* shape) {
-	ADrawable->Release(shape->drawable);
+    ADrawable->Release(shape->drawable);
 }
 
 static void
@@ -32,7 +33,7 @@ InitPlane(Shape* outShape) {
         { 1.0,-1.0, 0.0, 1.0,   0.0, 0.0, 1.0, 1.0,   1.0, 1.0},
         { 1.0, 1.0, 0.0, 1.0,   0.0, 1.0, 1.0, 1.0,   1.0, 0.0},
     };
-   	drawable->size = 4;
+    drawable->size = 4;
     
     // allocate vertex array and bind it
     // https://stackoverflow.com/questions/16380005/opengl-3-4-glvertexattribpointer-stride-and-offset-miscalculation 
@@ -53,7 +54,7 @@ InitPlane(Shape* outShape) {
 }
 
 struct AShape AShape[1] = {{
-	Create,
-	Init,
-	Release,
+    Create,
+    Init,
+    Release,
 }};
