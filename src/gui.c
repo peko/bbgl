@@ -33,8 +33,8 @@ void gui_init(GLFWwindow* win) {
 
 void gui_update(){
     ImGui_ImplGlfwGL3_NewFrame();
+
     igBegin("Test", NULL, 0);
-    // igBegin("Stream widget", NULL, 0);
     igText("Test");
     igButton("Test",(struct ImVec2){0,0});
     igEnd();
