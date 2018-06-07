@@ -14,7 +14,7 @@
 #include <GLFW/glfw3.h>
 
 #include "bbgl.h"
-#include "gui.h"
+#include "Gui.h"
 #include "Scene.h"
 
 #define WINDOW_WIDTH 1200
@@ -54,7 +54,7 @@ void bbgl_init() {
     // }
     
     scene = AScene->Create();
-    gui_init(win);
+    AGui->Init(win);
 }
 
 void bbgl_loop() {
@@ -62,7 +62,7 @@ void bbgl_loop() {
     while (!glfwWindowShouldClose(win)) {
         /* Input */
         glfwPollEvents();
-        gui_update();
+        AGui->Update();
 
         /* Draw */
         glfwGetWindowSize(win, &width, &height);
@@ -71,14 +71,15 @@ void bbgl_loop() {
         glClearColor(0.0, 0.0, 0.0, 0.0);
 
         AScene->Render(scene);
-        gui_render();
+        AGui->Render();
         
         glfwSwapBuffers(win);
     }
 
     // cleanup
     AScene->Release(scene);
-    gui_terminate();
+    AGui->Release();
+
     glfwTerminate();
 }
 

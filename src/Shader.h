@@ -7,8 +7,7 @@ typedef struct {
     GLuint mvp;
     GLuint col;
     GLuint pos;
-} shader_t;
-typedef shader_t* shader_p;
+} Shader;
 
 struct AShader {
    Shader* (*Create )(char*);

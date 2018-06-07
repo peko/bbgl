@@ -1,6 +1,6 @@
 #include "Scene.h"
 #include "Drawable.h"
-#include "shader.h"
+#include "Shader.h"
 
 Shader* shader;
 

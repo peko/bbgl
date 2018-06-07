@@ -17,10 +17,14 @@
 #include <cimgui/cimgui.h>
 #include <imgui_impl_glfw_gl3.h>
 
+
+#include "Gui.h"
+
 struct ImGuiContext* ctx;
 struct ImGuiIO* io; 
 
-void gui_init(GLFWwindow* win) {
+static void 
+Init(GLFWwindow* win) {
 
     // IMGUI_CHECKVERSION();
     ctx = igCreateContext(NULL);
@@ -31,7 +35,8 @@ void gui_init(GLFWwindow* win) {
     igStyleColorsDark(NULL);
 }
 
-void gui_update(){
+static void
+Update(){
     ImGui_ImplGlfwGL3_NewFrame();
 
     igBegin("Test", NULL, 0);
@@ -45,14 +50,23 @@ void gui_update(){
 	igShowDemoWindow(NULL);
 }
 
-void gui_render(){
+static void
+Render(){
     igRender();
     ImGui_ImplGlfwGL3_RenderDrawData(igGetDrawData());
 }
 
-void gui_terminate(){
+static void
+Release(){
     ImGui_ImplGlfwGL3_Shutdown();
     igDestroyContext(ctx);
 };
+
+struct AGui AGui[1] = {{
+	Init,
+	Release,
+	Update,
+	Render,
+}};
 
 

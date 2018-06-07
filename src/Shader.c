@@ -6,16 +6,16 @@
 static void check_shader(GLuint sid);
 static void load_file( char*  filename,  char** buf);
 
-static Shader*
-Init(Shader* outShader) {
+static void
+Init(Shader* outShader, char* name) {
     
     char vert_name[256];
     char frag_name[256];
     char* vert_text;
     char* frag_text;
     
-    sprintf(vert_name, "shaders/%s.vert", shader_name);
-    sprintf(frag_name, "shaders/%s.frag", shader_name);
+    sprintf(vert_name, "shaders/%s.vert", name);
+    sprintf(frag_name, "shaders/%s.frag", name);
     
     load_file(vert_name, &vert_text);
     load_file(frag_name, &frag_text);
@@ -30,16 +30,16 @@ Init(Shader* outShader) {
     glCompileShader(frag_id);
     check_shader(frag_id);
 
-    shader->prog = glCreateProgram();
-    glAttachShader(shader->prog, vert_id);
-    glAttachShader(shader->prog, frag_id);
-    glLinkProgram (shader->prog);
+    outShader->prog = glCreateProgram();
+    glAttachShader(outShader->prog, vert_id);
+    glAttachShader(outShader->prog, frag_id);
+    glLinkProgram (outShader->prog);
 
     glDeleteShader(vert_id);
     glDeleteShader(frag_id);
     
-    shader->mvp = glGetUniformLocation(shader->prog, "mvp");
-    printf("mvp %d\n", shader->mvp);
+    outShader->mvp = glGetUniformLocation(outShader->prog, "mvp");
+    printf("mvp %d\n", outShader->mvp);
     // shader->col = glGetUniformLocation(shader->prog, "col");
     // shader->pos = glGetAttribLocation (shader->prog, "pos");
 
@@ -51,7 +51,7 @@ Init(Shader* outShader) {
 static Shader* 
 Create(char* name) {
     Shader* shader = malloc(sizeof(Shader));
-	Init(shader, name)
+	Init(shader, name);
     return shader;
 }
 
@@ -78,7 +78,7 @@ struct AShader AShader[1] = {{
 	Release,
 	Start,
 	Stop,
-}}
+}};
 
 
 // draw loop
