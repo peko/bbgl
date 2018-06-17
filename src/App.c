@@ -14,6 +14,7 @@
 #include <GLFW/glfw3.h>
 
 #include "App.h"
+#include "Resources.h"
 #include "Gui.h"
 #include "Scene.h"
 
@@ -56,7 +57,8 @@ Init() {
     //     fprintf(stderr, "Failed to setup GLEW\n");
     //     exit(1);
     // }
-    
+
+   	AResources->Init();
     scene = AScene->Create();
     AScene->Resize(scene, width,height);
     AGui->Init(win);
@@ -70,7 +72,6 @@ onResize(GLFWwindow* win, int width, int height) {
 
 static void 
 Loop() {
-    
     while (!glfwWindowShouldClose(win)) {
         /* Input */
         glfwPollEvents();
@@ -87,15 +88,21 @@ Loop() {
         
         glfwSwapBuffers(win);
     }
+}
 
+static void
+Release() {
     // cleanup
     AScene->Release(scene);
     AGui->Release();
-
+	AResources->Release();
     glfwTerminate();
+
 }
 
-struct AApp AApp[1] = {{
-    Init,
-    Loop
+struct AApp 
+AApp[1] = {{
+    .Init    = Init,
+    .Release = Release,
+    .Loop    = Loop,
 }};
